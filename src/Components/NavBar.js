@@ -15,22 +15,22 @@ function NavBar(){
     return(
         <>
             <Navbar 
-                className="bg-body-primary h-25 m-3"
+                className="bg-body-primary h-25 m-2"
                 bg="primary"
                 data-bs-theme="dark"
                 fixed="top"
             >
-                <Container className='pt-4 mt-5'>
+                <Container className='pt-2 m-auto'>
                     <Stack>
                         <Nav className='ms-auto'>
-                            <Nav.Link href="#" className="text-light fs-4">Home</Nav.Link>
-                            <Nav.Link href="#" className="text-light fs-4">About</Nav.Link>
-                            <Nav.Link href="#" className="text-light fs-4">Add a cat!</Nav.Link>
+                            <Nav.Link href="#" className="text-light fs-4 px-3">Home</Nav.Link>
+                            <Nav.Link href="#" className="text-light fs-4 px-3">About</Nav.Link>
+                            <Nav.Link href="#" className="text-light fs-4 px-3">Add a cat!</Nav.Link>
                         </Nav>
 
                         <Navbar.Brand href="#home" className='my-2'>
                             <Row>
-                                <Col className='mb-auto' sm={2}>
+                                <Col className="align-self-center" sm={2}>
                                     <Image 
                                     src="https://shorturl.at/pxDY6"
                                     alt="UPDATE THIS"
@@ -40,12 +40,12 @@ function NavBar(){
                                     /> {' '}
                                 </Col>
 
-                                <Col className='mb-auto'>
+                                <Col className="align-self-center">
                                     <h1 className='text-light'>Catspace</h1>
                                     <p className="text-light">Where cats have profiles</p>
                                 </Col>
 
-                                <Col className='p-auto m-auto'>
+                                <Col className='align-self-center'>
                                     {/*FORM HERE*/}
                                     <Form inline>
                                         <Row className="justify-content-end">
