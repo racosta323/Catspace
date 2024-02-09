@@ -35,7 +35,7 @@ function NavBar(){
                             </Col>
                             <Col className="align-self-center ms-5" xs={3} md={4}>
                                 <h1 className='text-light'>Catspace</h1>
-                                <p className="text-light">Where cats have profiles</p>
+                                <p className="text-light">Where cats have profiles - TEST</p>
                                 <Nav className='ms-6 my-2 my-lg-0'>
                                     <Nav.Link href="#" className="text-light fs-4 pe-3 ps-0">Home</Nav.Link>
                                     <Nav.Link href="#" className="text-light fs-4 pe-3">About</Nav.Link>
