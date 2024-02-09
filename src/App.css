@@ -1,0 +1,79 @@
+.AboutPage {
+  font-family: Arial, sans-serif;
+  color: #333;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.general-info {
+  flex: 1; 
+  text-align: center; 
+}
+
+.general-info h2 {
+  margin-bottom: 0.5em; 
+}
+
+.about-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px; 
+}
+
+.general-info {
+  flex: 3; 
+  padding-right: 20px; 
+}
+
+.hero-image {
+  flex: 0 0 350px; 
+  max-width: 300px; 
+  padding: 0;
+  margin: 0; 
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.developers {
+  text-align: center;
+}
+
+.developers > div {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.ReneImage,
+.HunterImage,
+.EveImage {
+  background-color: #e0e0e0;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 10px;
+}
+
+.ReneImage img,
+.HunterImage img,
+.EveImage img {
+  max-width: 100%;
+  border-radius: 50%;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+h3 {
+  margin-top: 0;
+}
+
+.SomethingAbout {
+  margin-top: 50px;
+}
