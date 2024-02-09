@@ -1,11 +1,12 @@
 import About from "./About"
-
-
+import NavBar from "./NavBar";
 
 function App() {
   return (
     <section>
-      <About/>
+      <About />
+      <UserProfile/>
+      <NavBar />
     </section>
   );
 }
