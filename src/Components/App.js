@@ -1,9 +1,11 @@
+import NavBar from "./NavBar";
+
 function App() {
   return (
-    <section>
-      <UserProfile/>
-    </section>
-  );
+    <header>
+      <NavBar />
+    </header>
+  )
 }
 
 export default App;
