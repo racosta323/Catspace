@@ -23,7 +23,7 @@ function NavBar(){
             >
                 <Container fluid>
                     <Navbar.Brand href="#home" className='m-5'>
-                        <Row>
+                        <Row className='space-between'>
                             <Col xs={3} md={2} className="align-self-center">
                                 <Image 
                                 src="https://shorturl.at/pxDY6"
