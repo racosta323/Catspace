@@ -58,7 +58,7 @@ function About() {
                     <Stack className="col-md-6 mx-auto">
                         <Image
                             src="https://cdn.outsideonline.com/wp-content/uploads/2020/10/29/hunting-for-beginners-lead_s.jpg"
-                            alt="photo of Rene"
+                            alt="photo of Hunter"
                             width={171}
                             height={180}
                             roundedCircle
@@ -72,7 +72,7 @@ function About() {
                     <Stack className="col-md-6 mx-auto">
                         <Image
                             src="https://upload.wikimedia.org/wikipedia/commons/5/53/Eve_2011_cropped.jpg"
-                            alt="photo of Rene"
+                            alt="photo of Eve"
                             width={170}
                             height={180}
                             roundedCircle
