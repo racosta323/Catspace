@@ -6,7 +6,12 @@ function NavBar(){
 
     return(
         <>
-            <Navbar bg="primary" data-bs-theme="light" className='justify-content-between p-2'>
+            <Navbar 
+                bg="primary" 
+                data-bs-theme="light" 
+                className='justify-content-between p-2'
+                sticky="top"
+            >
                 <Navbar.Brand href="#home" className='text-light'>
                     <Image 
                         src="https://shorturl.at/pxDY6"
@@ -26,13 +31,14 @@ function NavBar(){
                         <NavLink className="text-light">About</NavLink>
                         <NavLink className="text-light">Add a cat</NavLink>
                     </Nav>
-
+                   
+                    {/*Form*/}
                     <Form className="d-flex p-4">
                         <Form.Control
-                        type="search"
-                        placeholder="Search a cat"
-                        className="me-2"
-                        aria-label="Search"
+                            type="search"
+                            placeholder="Search a cat"
+                            className="me-2"
+                            aria-label="Search"
                         />
                         <Button variant="dark">Search</Button>
                     </Form>                    

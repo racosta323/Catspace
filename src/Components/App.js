@@ -2,10 +2,11 @@ import NavBar from "./NavBar";
 
 function App() {
   return (
-    <header>
+    <section>
       <NavBar />
-    </header>
-  )
+      <About />
+    </section>
+  );
 }
 
 export default App;

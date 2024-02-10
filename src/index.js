@@ -5,7 +5,7 @@ import App from './Components/App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import "./App.css"
-
+import {Navbar, Form, Button, Nav, Image, NavLink } from 'react-bootstrap'
 
 
 
