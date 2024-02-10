@@ -1,12 +1,12 @@
 import About from "./About"
 import NavBar from "./NavBar";
+import About from "./About"
 
 function App() {
   return (
     <section>
-      <About />
-      <UserProfile/>
       <NavBar />
+      <About />
     </section>
   );
 }
