@@ -18,10 +18,9 @@ function About() {
                 </Col>
                 <Col className="m-5, p-5">
                     <Image 
-                        src="HeroCat.jpg" 
+                        src="https://static.scientificamerican.com/sciam/cache/file/9CAE9C60-8BC5-4CA3-95C180EFACDD99FD_source.jpg" 
                         alt="Hero Cat!" 
-                        size="" 
-                        width={371}
+                        width={380}
                         height={380}
                         rounded
                     />
