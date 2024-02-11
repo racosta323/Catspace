@@ -2,7 +2,7 @@ import App from "./Components/App"
 import Home from "./Components/Home"
 import About from "./Components/About"
 import CatProfile from "./Components/CatProfile"
-import Form from './Components/Form'
+import Form from './Components/AddACat'
 import NavBar from "./Components/NavBar"
 import Footer from "./Components/Footer"
 

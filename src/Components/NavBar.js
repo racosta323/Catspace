@@ -1,7 +1,4 @@
-/* increased size of title*/
-
 import {Navbar, Form, Button, Nav, Image, NavLink, Stack, Col, Row } from 'react-bootstrap'
-// import { NavLink } from 'react-router-dom'
 
 function NavBar(){
 
