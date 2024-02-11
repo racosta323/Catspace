@@ -1,6 +1,7 @@
 /* increased size of title*/
 
 import {Navbar, Form, Button, Nav, Image, NavLink, Stack, Col, Row } from 'react-bootstrap'
+// import { NavLink } from 'react-router-dom'
 
 function NavBar(){
 
@@ -14,14 +15,16 @@ function NavBar(){
                 className='justify-content-between p-2'
                 sticky="top"
             >
-                <Image 
-                    src="https://shorturl.at/pxDY6"
-                    alt="UPDATE THIS"
-                    roundedCircle
-                    width={100}
-                    height={100}
-                    className='p-1 ms-4'
-                /> {' '}
+                <a href="/">
+                    <Image 
+                        src="https://shorturl.at/pxDY6"
+                        alt="UPDATE THIS"
+                        roundedCircle
+                        width={100}
+                        height={100}
+                        className='p-1 ms-4'
+                    /> {' '}
+                </a>
 
                 <Row>
                     <Col className='me-3'>
@@ -37,9 +40,9 @@ function NavBar(){
                         className="me-auto my-2 my-lg-0"
                         style={{ maxHeight: '100px' }}
                     >
-                        <NavLink className="text-light fw-semibold">Home</NavLink>
-                        <NavLink className="text-light fw-semibold">About</NavLink>
-                        <NavLink className="text-light fw-semibold">Add a cat!</NavLink>
+                        <NavLink className="text-light fw-semibold" href="/">Home</NavLink>
+                        <NavLink className="text-light fw-semibold" href="/about">About</NavLink>
+                        <NavLink className="text-light fw-semibold" href="/addacat">Add a cat!</NavLink>
                     </Nav>
                    
                     {/*Form*/}

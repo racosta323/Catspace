@@ -1,4 +1,4 @@
-import { Container, Row, Col, Stack, Image } from "react-bootstrap"
+import { Container, Row, Col, Stack, Image, Nav, NavLink } from "react-bootstrap"
 
 function Footer(){
     return(
@@ -21,11 +21,11 @@ function Footer(){
                     </Col>
 
                     <Col>
-                        <ul className="list-group fw-medium fs-5 mt-3">Useful Links
-                            <li className="list-group-item bg-secondary text-light border border-0 fs-5 fw-light">Home</li>
-                            <li className="list-group-item bg-secondary text-light border border-0 fs-5 fw-light">About</li>
-                            <li className="list-group-item bg-secondary text-light border border-0 fs-5 fw-light">Add a cat!</li>
-                        </ul>
+                        <Nav className="list-group fw-medium fs-5 mt-3">Useful Links
+                            <NavLink href="/" className="list-group-item bg-secondary text-light border border-0 fs-5 fw-light">Home</NavLink>
+                            <NavLink href="/about" className="list-group-item bg-secondary text-light border border-0 fs-5 fw-light">About</NavLink>
+                            <NavLink href="/addacat" className="list-group-item bg-secondary text-light border border-0 fs-5 fw-light">Add a cat!</NavLink>
+                        </Nav>
                     </Col>
 
                     <Col>

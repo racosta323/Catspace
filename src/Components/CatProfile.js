@@ -40,7 +40,7 @@ function CatProfile(){
                         <Button href="#" variant="primary" className="ms-5">Photos</Button>
                     </Col>
                 </Row>
-                
+
                 <hr className="ms-5"></hr>
                 <Row className="m-3"></Row>
 
@@ -72,9 +72,6 @@ function CatProfile(){
                 </Row>
 
             </Container>
-
-            
-            
         </Container>
     )
 }

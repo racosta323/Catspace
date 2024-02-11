@@ -1,15 +1,20 @@
-import About from "./About"
 import NavBar from "./NavBar"
 import Footer from "./Footer"
-import CatProfile from "./CatProfile";
+import { Outlet } from "react-router-dom"
 
 function App() {
   return (
-    <section>
-      <NavBar />
-      <CatProfile />
-      <Footer />
-    </section>
+    <>
+      <header>
+        <NavBar/>
+      </header>
+      <main>
+        <Outlet />
+      </main>
+      <footer>
+        <Footer/>
+      </footer>
+    </>
   );
 }
 
