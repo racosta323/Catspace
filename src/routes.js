@@ -20,7 +20,7 @@ const routes = [
                 element: <About/>
             },
             {
-                path: "/profile:id",
+                path: "/profile",
                 element: <CatProfile/>
             },
             {
