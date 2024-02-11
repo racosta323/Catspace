@@ -1,4 +1,4 @@
-.AboutPage {
+/* .AboutPage {
   font-family: Arial, sans-serif;
   color: #333;
   max-width: 1200px;
@@ -76,4 +76,11 @@ h3 {
 
 .SomethingAbout {
   margin-top: 50px;
+} */
+
+.image-size {
+  height: 380px;
+  width: 371px;
+  margin-top: 300px;
+  margin-bottom: 100px
 }

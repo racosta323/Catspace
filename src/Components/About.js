@@ -13,27 +13,31 @@ function About() {
             </Row>
             <Row>
                 <Col md={{ span: 5, offset: 1 }} className="m-5, p-5">
-                    <h1 class="fw-bold my-5">About The Site!</h1>
+                    <h1 className="fw-bold my-5">About The Site!</h1>
                     <p>All work and no play makes Jack a dull boyAll work and no play makes Jack a dull boyAll work and no play makes Jack a dull boyAll work and no play makes Jack a dull boyAll work and no play makes Jack a dull boyAll work and no play makes Jack a dull boyAll work and no play makes Jack a dull boy</p>
                 </Col>
                 <Col className="m-5, p-5">
                     <Image 
                         src="https://static.scientificamerican.com/sciam/cache/file/9CAE9C60-8BC5-4CA3-95C180EFACDD99FD_source.jpg" 
                         alt="Hero Cat!" 
-                        width={380}
-                        height={380}
+                        width={360}
+                        height={360}
                         rounded
                     />
                 </Col>
             </Row>
             
             <Row>
-                <Col className="m-5, p-5"></Col>
+                <Col className="m-4, p-5"></Col>
+            </Row>
+
+            <Row>
+                <Col className="m-4, p-4"></Col>
             </Row>
 
             <Row>
                 <Col>
-                    <h2 class="text-center fw-bolder">Developers</h2>
+                    <h2 className="text-center fw-bolder">Developers</h2>
                 </Col>
             </Row>
             
@@ -48,8 +52,8 @@ function About() {
                             height={180}
                             roundedCircle
                         />
-                        <h3 class="text-center">Rene Acosta</h3>
-                        <p class="text-center">All work and no play makes Jack a dull boy</p>
+                        <h3 className="text-center">Rene Acosta</h3>
+                        <p className="text-center">All work and no play makes Jack a dull boy</p>
                     </Stack>
                 </Col>
 
@@ -63,8 +67,8 @@ function About() {
                             height={180}
                             roundedCircle
                         />
-                        <h3 class="text-center">Hunter Matyi</h3>
-                        <p class="text-center">All work and no play makes Jack a dull boy</p>
+                        <h3 className="text-center">Hunter Matyi</h3>
+                        <p className="text-center">All work and no play makes Jack a dull boy</p>
                     </Stack> 
                 </Col>
                 
@@ -77,8 +81,8 @@ function About() {
                             height={180}
                             roundedCircle
                         />
-                        <h3 class="text-center">Eve Strittmatter</h3>
-                        <p class="text-center">All work and no play makes Jack a dull boy</p>
+                        <h3 className="text-center">Eve Strittmatter</h3>
+                        <p className="text-center">All work and no play makes Jack a dull boy</p>
                     </Stack>
                 </Col>
             </Row>
@@ -89,8 +93,8 @@ function About() {
             
             <Row>
                 <Col className="m-5, p-5">
-                    <h3 class="text-center fw-bold">Something About the Project</h3>
-                    <p class="text-center">All work and no play makes Jack a dull boyAll work and no play makes Jack a dull boyAll work and no play makes Jack a dull boyAll work and no play makes Jack a dull boyAll work and no play makes Jack a dull boyAll work and no play makes Jack a dull boyAll work and no play makes Jack a dull boyAll work and no play makes Jack a dull boyAll work and no play makes Jack a dull boyAll work and no play makes Jack a dull boy</p>
+                    <h3 className="text-center fw-bold">Something About the Project</h3>
+                    <p className="text-center">All work and no play makes Jack a dull boyAll work and no play makes Jack a dull boyAll work and no play makes Jack a dull boyAll work and no play makes Jack a dull boyAll work and no play makes Jack a dull boyAll work and no play makes Jack a dull boyAll work and no play makes Jack a dull boyAll work and no play makes Jack a dull boyAll work and no play makes Jack a dull boyAll work and no play makes Jack a dull boy</p>
                 </Col>
             </Row>    
 
