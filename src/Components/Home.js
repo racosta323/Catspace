@@ -26,6 +26,26 @@ function Home() {
             id: 4,
             name: "Magnus",
             image: "https://i.redd.it/bdrgb54ad0521.jpg",
+        },
+        {
+            id: 5,
+            name: "Petuccine Alfriendo",
+            image: "https://catamazing.com/cdn/shop/files/catshark.jpg?v=1649869148",
+        },
+        {
+            id: 6,
+            name: "Magnus",
+            image: "https://i.redd.it/bdrgb54ad0521.jpg",
+        },
+        {
+            id: 3,
+            name: "Petuccine Alfriendo",
+            image: "https://catamazing.com/cdn/shop/files/catshark.jpg?v=1649869148",
+        },
+        {
+            id: 4,
+            name: "Magnus",
+            image: "https://i.redd.it/bdrgb54ad0521.jpg",
         }
     ]
 
