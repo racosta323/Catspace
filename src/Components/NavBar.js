@@ -37,9 +37,9 @@ function NavBar(){
                         className="me-auto my-2 my-lg-0"
                         style={{ maxHeight: '100px' }}
                     >
-                        <NavLink className="text-light fw-semibold" href="/">Home</NavLink>
-                        <NavLink className="text-light fw-semibold" href="/about">About</NavLink>
-                        <NavLink className="text-light fw-semibold" href="/addacat">Add a cat!</NavLink>
+                        <NavLink className="text-light fw-medium" href="/">Home</NavLink>
+                        <NavLink className="text-light fw-medium" href="/about">About</NavLink>
+                        <NavLink className="text-light fw-medium" href="/addacat">Add a cat!</NavLink>
                     </Nav>
                    
                     {/*Form*/}

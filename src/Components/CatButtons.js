@@ -1,7 +1,7 @@
 import { Figure } from "react-bootstrap"
 
 function CatButtons({ name, image, id }){
-    console.log(id)
+
     
   function handleOnClick(){
     console.log("hello")

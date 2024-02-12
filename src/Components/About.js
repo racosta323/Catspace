@@ -13,7 +13,7 @@ function About() {
             </Row>
             <Row>
                 <Col md={{ span: 5, offset: 1 }} className="m-5, p-5">
-                    <h1 className="fw-bold my-5">About The Site!</h1>
+                    <h2 className="fw-bold my-5">About The Site!</h2>
                     <p>All work and no play makes Jack a dull boyAll work and no play makes Jack a dull boyAll work and no play makes Jack a dull boyAll work and no play makes Jack a dull boyAll work and no play makes Jack a dull boyAll work and no play makes Jack a dull boyAll work and no play makes Jack a dull boy</p>
                 </Col>
                 <Col className="m-5, p-5">
