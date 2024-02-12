@@ -1,38 +1,57 @@
-.App {
-  text-align: center;
+.cat-cards {
+    margin: 5rem;
+    padding: 2rem;
+    background-color: rgb(182, 182, 214);
+    display: grid;
+    /* grid-template-columns: auto auto auto; */
+    /* this will force 6 items in no matter the window width. might be a better way, like flexbox */
+    grid-template-columns: repeat(6, 1fr); 
+    text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.cat-card {
+    display: block;
+    margin: auto;
+    justify-content: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* .cat-name {
+    text-align: center;
+} */
+
+.pic-cropper {
+    margin:auto;
+    width: 6rem;
+    height: 6rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+}
+  
+/* note the profile pic class is for catcards on the home page, the profile pic id is for the profile page */
+
+.profile-pic {
+    display: inline;
+    margin: 0 auto;
+    height: 100%;
+    width: auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#profile-section {
+    padding: 3rem;
 }
 
-.App-link {
-  color: #61dafb;
+#profile-pic {
+    position: absolute;
+    top: calc(340px + 3rem);
+    left: calc(20px + 3rem);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#profile-banner {
+    padding-bottom: 50px;
+}
+
+#photos-section {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
