@@ -8,10 +8,10 @@ function AddACat(){
         originallyFrom: '',
         nickname: '',
         profilePhotoUrl: '', 
-        backgroundPhotoUrl: '', 
+        bannerPhotoUrl: '', 
     })
     const [profilePhotoUrl, setProfilePhoto] = useState(null);
-    const [backgroundPhotoUrl, setBackgroundPhoto] = useState(null);
+    const [bannerPhotoUrl, setBannerPhoto] = useState(null);
 
     const handleInputChange = (e) => {
         const {name, value} = e.target;
@@ -65,7 +65,7 @@ function AddACat(){
                     originallyFrom: formData.originallyFrom,
                     nickname: formData.nickname,
                     profilePhoto: formData.profilePhotoUrl,
-                    backgroundPhoto: formData.backgroundPhotoUrl,
+                    bannerPhoto: formData.bannerPhotoUrl,
                 }),
             });
 
@@ -81,7 +81,7 @@ function AddACat(){
                 originallyFrom: '',
                 nickname: '',
                 profilePhotoUrl: '',
-                backgroundPhotoUrl: '',
+                bannerPhotoUrl: '',
             });
         } catch (error) {
             console.error('Error during form submission:', error);
@@ -126,9 +126,9 @@ function AddACat(){
                         <Form.Control type="file" name="profilePhoto"onChange={handleFileChange}></Form.Control>
                     </Form.Group>
 
-                    <Form.Group className='mb-3' controlId='formBackgroundPhoto'>
-                        <Form.Label>Background Photo</Form.Label>
-                        <Form.Control type="file" name="backgroundPhoto"onChange={handleFileChange}></Form.Control>
+                    <Form.Group className='mb-3' controlId='formBannerPhoto'>
+                        <Form.Label>Banner Photo</Form.Label>
+                        <Form.Control type="file" name="bannerPhoto"onChange={handleFileChange}></Form.Control>
                     </Form.Group>
                     
 
