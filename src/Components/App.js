@@ -1,13 +1,19 @@
-import Home from './Home.js';
-import Profile from './Profile.js';
-import '../App.css';
+import NavBar from "./NavBar"
+import Footer from "./Footer"
+import { Outlet } from "react-router-dom"
 
 function App() {
   return (
     <>
-      {/* the header/navbar will go here as the first child/children */}
-      {/* in the future, we will use outlet context to provide data */}
-     <Profile /> 
+      <header>
+        <NavBar/>
+      </header>
+      <main>
+        <Outlet />
+      </main>
+      <footer>
+        <Footer/>
+      </footer>
     </>
   );
 }
