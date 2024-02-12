@@ -7,9 +7,11 @@ function AddACat(){
         livesIn: '',
         originallyFrom: '',
         nickname: '',
+        profilePhotoUrl: '', 
+        backgroundPhotoUrl: '', 
     })
-    const [profilePhoto, setProfilePhoto] = useState(null);
-    const [backgroundPhoto, setBackgroundPhoto] = useState(null);
+    const [profilePhotoUrl, setProfilePhoto] = useState(null);
+    const [backgroundPhotoUrl, setBackgroundPhoto] = useState(null);
 
     const handleInputChange = (e) => {
         const {name, value} = e.target;
@@ -19,47 +21,68 @@ function AddACat(){
         }));
     };
 
-    const handleFileChange = (e) => {
-        const {name, files} = e.target;
-        if (name === 'profilePhoto') {
-            setProfilePhoto(files[0]);
-        } else if (name === 'backgroundPhoto') {
-            setBackgroundPhoto(files[0]);
+    const handleFileChange = async (e) => {
+        const { name, files } = e.target;
+        const file = files[0];
+        if (!file) return;
+
+        const formData = new FormData();
+        formData.append('file', file);
+        formData.append('upload_preset', 'lzc5ipfk'); 
+        formData.append('cloud_name', 'dretra7g8'); 
+
+        try {
+            const response = await fetch(`https://api.cloudinary.com/v1_1/dretra7g8/image/upload`, {
+                method: 'POST',
+                body: formData,
+            });
+            const data = await response.json();
+            setFormData((prevFormData) => ({
+                ...prevFormData,
+                [name + 'Url']: data.secure_url, 
+
+
+
+            }));
+        } catch (error) {
+            console.error('Error uploading image:', error);
         }
     };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         console.log("Form submitted");
-    
-        const jsonData = {
-            name: formData.name,
-            livesIn: formData.livesIn,
-            originallyFrom: formData.originallyFrom,
-            nickname: formData.nickname,
-        }
+
         try {
             const response = await fetch('https://catspace.onrender.com/cats', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify(jsonData),
+                body: JSON.stringify({
+                    name: formData.name,
+                    livesIn: formData.livesIn,
+                    originallyFrom: formData.originallyFrom,
+                    nickname: formData.nickname,
+                    profilePhoto: formData.profilePhotoUrl,
+                    backgroundPhoto: formData.backgroundPhotoUrl,
+                }),
             });
-    
+
             if (!response.ok) throw new Error('Network response was not ok');
             
+            console.log("Submission successful");
+            const result = await response.json();
+            console.log("Result:", result);
+
             setFormData({
                 name: '',
                 livesIn: '',
                 originallyFrom: '',
                 nickname: '',
+                profilePhotoUrl: '',
+                backgroundPhotoUrl: '',
             });
-            setProfilePhoto(null); 
-            setBackgroundPhoto(null); 
-    
-            const result = await response.json();
-            console.log("Submission successful, result:", result);
         } catch (error) {
             console.error('Error during form submission:', error);
         }
