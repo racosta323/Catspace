@@ -19,11 +19,46 @@ function Home(){
                         src="https://www.rd.com/wp-content/uploads/2022/03/GettyImages-509629699-scaled-e1648763472476.jpg?fit=700,466"
                         alt="something"
                         roundedCircle
-                        className="home-image-size"
+                        className="home-image-size m-5"
+                    />
+
+                    <Image
+                        src="https://www.rd.com/wp-content/uploads/2022/03/GettyImages-509629699-scaled-e1648763472476.jpg?fit=700,466"
+                        alt="something"
+                        roundedCircle
+                        className="home-image-size m-5"
+                    />
+
+                    <Image
+                        src="https://www.rd.com/wp-content/uploads/2022/03/GettyImages-509629699-scaled-e1648763472476.jpg?fit=700,466"
+                        alt="something"
+                        roundedCircle
+                        className="home-image-size m-5"
+                    />
+
+                    <Image
+                        src="https://www.rd.com/wp-content/uploads/2022/03/GettyImages-509629699-scaled-e1648763472476.jpg?fit=700,466"
+                        alt="something"
+                        roundedCircle
+                        className="home-image-size m-5"
+                    />
+
+                    <Image
+                        src="https://www.rd.com/wp-content/uploads/2022/03/GettyImages-509629699-scaled-e1648763472476.jpg?fit=700,466"
+                        alt="something"
+                        roundedCircle
+                        className="home-image-size m-5"
+                    />
+
+                    <Image
+                        src="https://www.rd.com/wp-content/uploads/2022/03/GettyImages-509629699-scaled-e1648763472476.jpg?fit=700,466"
+                        alt="something"
+                        roundedCircle
+                        className="home-image-size m-5"
                     />
                 </Col>
 
-                <Col>
+                {/* <Col>
                     <Image
                         src="https://www.rd.com/wp-content/uploads/2022/03/GettyImages-509629699-scaled-e1648763472476.jpg?fit=700,466"
                         alt="something"
@@ -69,7 +104,7 @@ function Home(){
                 </Col>
 
                 
-       
+        */}
 
             </Row>
        
