@@ -1,14 +1,14 @@
-.cat-cards {
+/* .cat-cards {
     margin: 5rem;
     padding: 2rem;
     background-color: rgb(182, 182, 214);
     display: grid;
-    /* grid-template-columns: auto auto auto; */
-    /* this will force 6 items in no matter the window width. might be a better way, like flexbox */
+    grid-template-columns: auto auto auto;
+    this will force 6 items in no matter the window width. might be a better way, like flexbox
     grid-template-columns: repeat(6, 1fr); 
     text-align: center;
 }
-/* .AboutPage {
+.AboutPage {
   font-family: Arial, sans-serif;
   color: #333;
   max-width: 1200px;
@@ -54,9 +54,9 @@
     justify-content: center;
 }
 
-/* .cat-name {
+.cat-name {
     text-align: center;
-} */
+}
 
 .pic-cropper {
     margin:auto;
@@ -67,7 +67,7 @@
     border-radius: 50%;
 }
   
-/* note the profile pic class is for catcards on the home page, the profile pic id is for the profile page */
+note the profile pic class is for catcards on the home page, the profile pic id is for the profile page
 
 .profile-pic {
     display: inline;
@@ -88,6 +88,8 @@
 
 #profile-banner {
     padding-bottom: 50px;
+}
+    
 .developers {
   text-align: center;
 }

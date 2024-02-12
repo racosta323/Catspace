@@ -1,4 +1,6 @@
 import { Container, Col, Row, Image } from "react-bootstrap"
+import UploadAvatar from "./UploadAvatar"
+import CatCard from "./CatCard"
 
 function Home(){
     
@@ -31,9 +33,11 @@ function Home(){
             <h2>View a cat's profile!</h2>
             {/* im testing uploadavatar below but it will eventually be placed in the addcat page not this page */}
             <UploadAvatar /> 
-            <div className="cat-cards">
+
+        {/* <---Eve's mapping---> */}
+            {/* <div className="cat-cards">
                 {mockCats.map(cat => <CatCard key={cat.id} name={cat.name} image={cat.image} />)}
-            </div>  
+            </div>   */}
 
             <Row className="m-5"></Row>
             <Row className="m-5">
