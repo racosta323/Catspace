@@ -1,6 +1,29 @@
 import { Container, Form, Row, Col, Button } from 'react-bootstrap'
+import { useRef } from "react"
 
 function AddACat(){
+
+    // const inputRef = useRef(null)
+    // console.log(inputRef)
+    // console.log(inputRef.current)
+
+
+    // const handleUpload = () => {
+    //     inputRef.current?.click()
+    // }
+
+ 
+
+function handleOnChange(e){
+   console.log(e.target)
+}    
+
+function handleSubmit(e){
+    e.preventDefault()
+
+    console.log(e.target.value)
+}
+
     return(
         <Container className='my-4'>
             <Row className='mt-4'>
@@ -14,7 +37,7 @@ function AddACat(){
                     <Form.Group className='mb-3' controlId='formBasicName'>
                         <Form.Label>Name</Form.Label>
                         {/* <---- this is the "input"----> */}
-                        <Form.Control type="text" placeholder="Enter name"></Form.Control>
+                        <Form.Control type="text" placeholder="Enter name" onChange={handleOnChange}></Form.Control>
                     </Form.Group>
 
                     <Form.Group className='mb-3' controlId='formBasicLivesIn'>
@@ -51,7 +74,7 @@ function AddACat(){
 
                     <Row className='mt-4'>
                         <Col md={{ offset: 10 }}>
-                            <Button type='submit' >Submit</Button>
+                            <Button type='submit' onClick={handleSubmit}>Submit</Button>
                         </Col>
                     </Row>
                     

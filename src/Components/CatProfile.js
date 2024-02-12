@@ -18,13 +18,13 @@ function CatProfile(){
         .catch(error=>console.log(error))
     }, [catId])
 
-    const renderBanner = (cat===null) ? null : cat.BannerPhoto
-    const renderProfilePhoto = (cat===null) ? null : cat.ProfilePhoto
-    const renderName = (cat===null) ? null : cat.Name
-    const renderLocation = (cat===null) ? null : cat.LivesIn
-    const renderOriginallyFrom = (cat===null) ? null : cat.OriginallyFrom
-    const renderNickname = (cat===null) ? null : cat.Nickname
-    const renderPronounces = (cat===null) ? null : cat.Pronounced
+    const renderBanner = (cat===null) ? null : cat.bannerPhoto
+    const renderProfilePhoto = (cat===null) ? null : cat.profilePhoto
+    const renderName = (cat===null) ? null : cat.name
+    const renderLocation = (cat===null) ? null : cat.livesIn
+    const renderOriginallyFrom = (cat===null) ? null : cat.originallyFrom
+    const renderNickname = (cat===null) ? null : cat.nickname
+    const renderPronounces = (cat===null) ? null : cat.pronounced
 
 
     return(
@@ -34,7 +34,7 @@ function CatProfile(){
             {/* <-- profile photo image --> */}
                 <Col xs={4} className="p-1 ms-5">
                     <Image
-                        src="https://www.rd.com/wp-content/uploads/2022/03/GettyImages-509629699-scaled-e1648763472476.jpg?fit=700,466"
+                        src={ renderProfilePhoto }
                         alt="something"
                         roundedCircle
                         className="image-size ms-5 position-absolute"
@@ -43,7 +43,7 @@ function CatProfile(){
                 
             {/* <-- banner image --> */}
                 <Image
-                    src="https://moderncat.com/wp-content/uploads/2014/08/play-sequence-1.png"
+                    src={ renderBanner }
                     alt="something"
                     fluid
                     style={{ height: '475px'}}

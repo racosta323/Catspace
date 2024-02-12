@@ -139,8 +139,7 @@ h3 {
   margin-bottom: 100px
 }
 
-.home-image-size {
-  height: 150px;
-  width: 150px;
-  
+Figure.Image{
+ height:200;
+ width: 200 
 }
