@@ -14,11 +14,12 @@ function Home(){
     
     return (
         <Container>
-            <Row className="m-5"></Row>
-            <Row className="m-5"></Row>
-            <Row className="m-5">
+            <Row className="m-4"></Row>
+            <Row className="m-4">
                 
                 <Col className="mt-5">
+                    <Row className="mt-5"></Row>
+                    <Row className="mt-5"></Row>
                     <h1 className="fs-1 mt-5">Behold</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br/>
                         Donec nulla metus, commodo nec augue vel, lacinia consequat eros.</p>
@@ -33,10 +34,16 @@ function Home(){
 
                 <Col>
                     <Image
-                        src="https://img.freepik.com/premium-photo/kitten-looking-through-hole-wall_962508-13028.jpg"
+                        src="https://www.fernvet.co.za/wp-content/uploads/2018/02/Cat-White-Background-Images.jpg"
                         alt="cat coming out of wall"
+                        height={450}
                     />
                 </Col>
+
+                <Row className="m-5"></Row>
+                <Row className="m-5"></Row>
+                <Row className="m-5"></Row>
+
 
             </Row>
 
@@ -62,7 +69,7 @@ function Home(){
                                     Add a cat
                                 </Figure.Caption>
                             </Figure>  
-                        </a>
+                        </a>    
 
                     {/* new cats here */}
                     

@@ -42,7 +42,8 @@ function NavBar(){
                         <NavLink className="text-light fw-medium" href="/addacat">Add a cat!</NavLink>
                     </Nav>
                    
-                    {/*Form*/}
+                    {/*Search a cat*/}
+                    
                     <Form className="d-flex p-4">
                         <Form.Control
                             type="search"
