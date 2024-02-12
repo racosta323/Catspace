@@ -1,5 +1,5 @@
 import { Container, Image, Row, Col, Button, Card } from "react-bootstrap"
-import { useParams, useOutletContext } from "react-router-dom"
+import { useParams } from "react-router-dom"
 import { useState, useEffect } from "react"
 
 
@@ -9,7 +9,6 @@ function CatProfile(){
 
     const params = useParams()
     const catId = params.id
-    const cats = useOutletContext()
     
     useEffect(()=>{
         fetch(`https://catspace.onrender.com/cats/${catId}`)

@@ -7,14 +7,16 @@ function Footer(){
                <Row className="bg-secondary text-white p-5 mt-3 pb-2">
                     <Col className="ms-5" xs={4}>
                         <Stack>
-                            <Image 
-                            src="https://shorturl.at/pxDY6"
-                            alt="UPDATE THIS"
-                            roundedCircle
-                            width={125}
-                            height={125}
-                            className='p-1 ms-4'
-                        /> {' '}
+                            <a href="/">
+                                <Image 
+                                src="https://shorturl.at/pxDY6"
+                                alt="UPDATE THIS"
+                                roundedCircle
+                                width={125}
+                                height={125}
+                                className='p-1 ms-4'
+                            /> {' '}
+                            </a>
                             <h2 className="fs-1">Catspace</h2>
                             <p>Where cats have profiles</p>
                         </Stack>

@@ -1,6 +1,5 @@
 import { Container, Col, Row, Figure } from "react-bootstrap"
 import { useOutletContext } from "react-router-dom"
-import { useState } from "react"
 import CatButtons from "./CatButtons";
 
 
@@ -9,10 +8,9 @@ function Home(){
     const allCats = useOutletContext()
 
     const renderCats = (allCats === undefined) ? null : allCats.map((cat)=>{
-        return <CatButtons name={cat.name} key={cat.id} image={cat.profilePhoto}/>
+        return <CatButtons name={cat.name} key={cat.id} image={cat.profilePhoto} id={cat.id}/>
     })
 
-    // console.log(renderName)
     
     return (
         <Container>
@@ -34,10 +32,10 @@ function Home(){
                 </Col>
             </Row>
 
-            <Row>
+            <Row className="bg-light border p-5">
                 <Col className="ms-4">
 
-                {/* add a cat */}
+                {/* add a cat button */}
                     <a href="/addacat">
                         <Figure>
                             <Figure.Image
