@@ -50,7 +50,7 @@ function Home(){
 
 
 
-            <a id="half">
+            <a id="half"></a>
                 <Row className="bg-light border p-5">
                     <Col className="ms-4">
 
@@ -79,7 +79,7 @@ function Home(){
                         
                     </Col>
                 </Row>
-            </a>
+            
        </Container>
     )
 }

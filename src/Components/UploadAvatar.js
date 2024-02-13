@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import Avatar from 'react-avatar-edit';
+import { Button, Row } from 'react-bootstrap'
 
-function UploadAvatar() {
+function UploadAvatar({ handleAvatarChange }) {
 
     const [ src, setSrc ] = useState('/cat_placeholder.png');
     const [ preview, setPreview ] = useState(null);
 
-    const onCrop = view => {setPreview(view);}
+    const onCrop = view => {setPreview(view);handleAvatarChange(view);console.log(view)}
     const onClose = () => {setPreview(null);}
 
     async function getRandomCatImage() { // i am using await instead of .then because i want the function to return something. if i made another state for the cat i could use then
@@ -33,15 +34,18 @@ function UploadAvatar() {
     useEffect(()=>{setRandomCatImage()}, []);
 
     return (
-        <div>
-            <Avatar
-                width={300}
-                height={300}
-                onCrop={onCrop}
-                onClose={onClose}
-                src={src}
-            />
-            <button onClick={setRandomCatImage}>Use a Random Cat</button>
+        <div className="d-flex justify-content-center">
+                <Avatar
+                    width={src.clientWidth}
+                    height={300}
+                    onCrop={onCrop}
+                    onClose={onClose}
+                    src={src}
+                />
+            <div>
+                <Row><Button className='ms-5 mb-2' onClick={setRandomCatImage}>Load a Random Cat</Button></Row>
+                <Row><Button className='ms-5 mb-2' >Upload Your Cat</Button></Row>
+            </div>
         </div>
     )
 }
