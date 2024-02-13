@@ -1,6 +1,8 @@
 import { Container, Image, Row, Col, Button, Card } from "react-bootstrap"
-import { useParams } from "react-router-dom"
+import { Navigate, useParams } from "react-router-dom"
 import { useState, useEffect } from "react"
+import { useNavigate } from 'react-router-dom'; 
+
 
 
 function CatProfile(){
@@ -24,6 +26,28 @@ function CatProfile(){
     const renderOriginallyFrom = (cat===null) ? null : cat.originallyFrom
     const renderNickname = (cat===null) ? null : cat.nickname
     const renderPronounces = (cat===null) ? null : cat.pronounced
+
+
+    const navigate = useNavigate(); 
+
+    const deleteCat = () => {
+        const isConfirmed = window.confirm("Are you sure you want to delete this beautiful feline?")
+        if (isConfirmed) {
+            fetch(`https://catspace.onrender.com/cats/${catId}`, {
+                method: 'DELETE',
+        })
+        .then(response => {
+            if (response.ok) {
+                navigate('/');
+            } else {
+                alert('There was an issue deleting this feline.');
+            }
+            })
+            .catch(error => console.log('Error:', error));
+        }}
+
+
+    
 
 
     return(
@@ -95,9 +119,11 @@ function CatProfile(){
                         </Card>
                     </Col>
                 </Row>
-
+                <Button variant="danger" className= "ms-5" onClick={deleteCat}>Delete Profile</Button>
             </Container>
         </Container>
+
+
     )
 }
 
