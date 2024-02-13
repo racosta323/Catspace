@@ -60,7 +60,7 @@ function CatProfile(){
                         src={ renderProfilePhoto }
                         alt="something"
                         roundedCircle
-                        className="image-size ms-5 position-absolute"
+                        className="image-size ms-5 position-absolute border border-white p-1 bg-white"
                     />
                 </Col>
                 
