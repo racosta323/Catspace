@@ -18,7 +18,7 @@ useEffect(()=>{
   return (
     <>
       <header>
-        <NavBar/>
+        <NavBar cats={cats}/>
       </header>
       <main>
         <Outlet context={cats}/>

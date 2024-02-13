@@ -1,8 +1,43 @@
 import {Navbar, Form, Button, Nav, Image, NavLink, Stack, Col, Row } from 'react-bootstrap'
+import { useState } from "react" 
+import CatProfile from './CatProfile'
 
-function NavBar(){
+function NavBar({ cats }){
 
-//put data in - create routing
+    // cats is from other component
+    // console.log(cats)
+    
+    const [search, setSearch] = useState("")
+
+    function onChangeHandler(e){
+        setSearch(e.target.value)
+    }
+
+    const lowerCaseSearch = search.toLowerCase()
+    
+
+    
+   
+    // if(cats !== undefined){
+    //     cats.filter((cat)=>console.log(cat.name))
+    // }
+    
+  
+
+    function onClickHandler(){
+
+        if(cats !== undefined){
+            cats.filter((cat)=>{
+                const lowerCaseCat = cat.name.toLowerCase()
+                console.log(lowerCaseCat)
+
+                }
+            )
+        }
+    }
+
+    
+
 
     return(
         <>
@@ -37,21 +72,28 @@ function NavBar(){
                         className="me-auto my-2 my-lg-0"
                         style={{ maxHeight: '100px' }}
                     >
-                        <NavLink className="text-light fw-medium" href="/">Home</NavLink>
-                        <NavLink className="text-light fw-medium" href="/about">About</NavLink>
-                        <NavLink className="text-light fw-medium" href="/addacat">Add a cat!</NavLink>
+                        <NavLink className="text-light fw-light" href="/">Home</NavLink>
+                        <NavLink className="text-light fw-light" href="/about">About</NavLink>
+                        <NavLink className="text-light fw-light" href="/addacat">Add a cat!</NavLink>
                     </Nav>
                    
                     {/*Search a cat*/}
-                    
+
                     <Form className="d-flex p-4">
                         <Form.Control
                             type="search"
                             placeholder="Search a cat"
                             className="me-2"
                             aria-label="Search"
+                            onChange={onChangeHandler}
                         />
-                        <Button variant="dark">Search</Button>
+                        <ul>
+                            {/* <li>Something</li> */}
+                        </ul>
+                       
+                        <Button variant="dark" onClick={onClickHandler}>Search</Button>
+
+
                     </Form>                    
 
                 </Navbar.Collapse>
