@@ -1,13 +1,14 @@
 import {Navbar, Form, Button, Nav, Image, NavLink, Stack, Col, Row } from 'react-bootstrap'
 import { useState } from "react" 
-import CatProfile from './CatProfile'
+import { useNavigate } from "react-router-dom"
 
 function NavBar({ cats }){
 
     // cats is from other component
-    // console.log(cats)
-    
+   
+
     const [search, setSearch] = useState("")
+    const navigate = useNavigate()
 
     function onChangeHandler(e){
         setSearch(e.target.value)
@@ -15,24 +16,18 @@ function NavBar({ cats }){
 
     const lowerCaseSearch = search.toLowerCase()
     
-
-    
-   
-    // if(cats !== undefined){
-    //     cats.filter((cat)=>console.log(cat.name))
-    // }
-    
-  
-
     function onClickHandler(){
 
         if(cats !== undefined){
-            cats.filter((cat)=>{
+            
+            const filteredCat = cats.filter((cat)=>{
                 const lowerCaseCat = cat.name.toLowerCase()
-                console.log(lowerCaseCat)
-
+                if(lowerCaseCat===lowerCaseSearch) return true
                 }
             )
+            const catId = filteredCat[0].id
+            navigate(`/profile/${catId}`)
+            setSearch("")
         }
     }
 
@@ -85,6 +80,7 @@ function NavBar({ cats }){
                             placeholder="Search a cat"
                             className="me-2"
                             aria-label="Search"
+                            value={search}
                             onChange={onChangeHandler}
                         />
                         <ul>
