@@ -1,5 +1,6 @@
 import { Container, Form, Row, Col, Button } from 'react-bootstrap'
 import React, {useState} from 'react'
+import UploadAvatar from './UploadAvatar';
 
 function AddACat(){
     const [formData, setFormData] = useState({
@@ -40,6 +41,31 @@ function AddACat(){
             setFormData((prevFormData) => ({
                 ...prevFormData,
                 [name + 'Url']: data.secure_url, 
+
+
+
+            }));
+        } catch (error) {
+            console.error('Error uploading image:', error);
+        }
+    };
+
+    //repeating code here but it's alright
+    const handleAvatarChange = async (file) => {
+        const formData = new FormData();
+        formData.append('file', file);
+        formData.append('upload_preset', 'lzc5ipfk'); 
+        formData.append('cloud_name', 'dretra7g8'); 
+
+        try {
+            const response = await fetch(`https://api.cloudinary.com/v1_1/dretra7g8/image/upload`, {
+                method: 'POST',
+                body: formData,
+            });
+            const data = await response.json();
+            setFormData((prevFormData) => ({
+                ...prevFormData,
+                ['profilePhotoUrl']: data.secure_url, 
 
 
 
@@ -123,12 +149,15 @@ function AddACat(){
 
                     <Form.Group className='mb-3' controlId='formBasicProfilePhoto'>
                         <Form.Label>Profile Photo</Form.Label>
-                        <Form.Control type="file" name="profilePhoto"onChange={handleFileChange}></Form.Control>
+                        {/* <Form.Control className='margins-auto' type="file" name="profilePhoto"onChange={handleFileChange}></Form.Control> */}
+                        <div > 
+                        <UploadAvatar handleAvatarChange={handleAvatarChange} />
+                        </div>
                     </Form.Group>
 
                     <Form.Group className='mb-3' controlId='formBannerPhoto'>
                         <Form.Label>Banner Photo</Form.Label>
-                        <Form.Control type="file" name="bannerPhoto"onChange={handleFileChange}></Form.Control>
+                        <Form.Control type="file" name="bannerPhoto" onChange={handleFileChange}></Form.Control>
                     </Form.Group>
                     
 

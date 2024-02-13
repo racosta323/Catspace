@@ -68,11 +68,41 @@ function Home() {
                 <Row className="m-5"></Row>
             </Row>
 
-            <Row className="bg-light border p-5">
-                {renderCats}
-            </Row>
-        </Container>
-    );
+
+
+
+            <a id="half"></a>
+                <Row className="bg-light border p-5">
+                    <Col className="ms-4">
+
+                    {/* add a cat button */}
+                        <a href="/addacat">
+                            <Figure>
+                                <Figure.Image
+                                    src="https://res.cloudinary.com/djsqcm710/image/upload/f_auto,q_auto/newCatImage_ivzaq2"
+                                    alt="something"
+                                    roundedCircle
+                                    className="mx-5"
+                                    width={200}
+                                    height={180}
+                                />
+                                <Figure.Caption className="fs-3 mx-5 text-center mb-5">
+                                    Add a cat
+                                </Figure.Caption>
+                            </Figure>  
+                        </a>    
+
+                    {/* new cats here */}
+                    
+                    { renderCats }
+                        
+
+                        
+                    </Col>
+                </Row>
+            
+       </Container>
+    )
 }
 
 export default Home;
