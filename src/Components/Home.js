@@ -5,7 +5,7 @@ import CatButtons from "./CatButtons";
 
 function Home(){
     
-    const allCats = useOutletContext()
+    const { allCats } = useOutletContext()
 
     const renderCats = (allCats === undefined) ? null : allCats.map((cat)=>{
         return <CatButtons name={cat.name} key={cat.id} image={cat.profilePhoto} id={cat.id}/>

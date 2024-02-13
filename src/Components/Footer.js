@@ -34,19 +34,19 @@ function Footer(){
                         <ul className="list-group fw-normal fs-5 mt-3">Follow us on GitHub!
                             <li className="list-group-item bg-secondary text-light border border-0 fs-5 fw-light">
                                 <a href="https://github.com/racosta323" target="_blank">
-                                    <i class="bi bi-github fs-4 text-dark"></i>
+                                    <i className="bi bi-github fs-4 text-dark"></i>
                                 </a>{' '}
                                 Rene Acosta
                             </li>
                             <li className="list-group-item bg-secondary text-light border border-0 4 fw-light">
                                 <a href="https://github.com/Huntmanjoe" target="_blank">
-                                    <i class="bi bi-github fs-4 text-dark"></i>
+                                    <i className="bi bi-github fs-4 text-dark"></i>
                                 </a>{' '}
                                 Hunter Matyi
                             </li>
                             <li className="list-group-item bg-secondary text-light border border-0 fs-5 fw-light">
                                 <a href="https://github.com/estritt" target="_blank">
-                                    <i class="bi bi-github fs-4 text-dark"></i>
+                                    <i className="bi bi-github fs-4 text-dark"></i>
                                 </a>{' '}
                                 Eve Strittmatter
                             </li>
