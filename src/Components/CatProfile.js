@@ -35,16 +35,18 @@ function CatProfile(){
         if (isConfirmed) {
             fetch(`https://catspace.onrender.com/cats/${catId}`, {
                 method: 'DELETE',
-        })
-        .then(response => {
-            if (response.ok) {
-                navigate('/');
-            } else {
+                }
+            )
+            .then(response => {
+                if (response.ok) {
+                    navigate('/');
+                } else {
                 alert('There was an issue deleting this feline.');
-            }
+                }
             })
             .catch(error => console.log('Error:', error));
-        }}
+        }
+    }
 
 
     
@@ -119,7 +121,13 @@ function CatProfile(){
                         </Card>
                     </Col>
                 </Row>
-                <Button variant="danger" className= "ms-5" onClick={deleteCat}>Delete Profile</Button>
+                
+                <Row className="mx-5">
+                    <Col>
+                        <Button variant="danger" className= "ms-5" onClick={deleteCat}>Delete Profile</Button>
+                    </Col>
+                </Row>
+                
             </Container>
         </Container>
 
