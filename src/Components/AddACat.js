@@ -31,7 +31,6 @@ function AddACat(){
         formData.append('file', file);
         formData.append('upload_preset', 'lzc5ipfk'); 
         formData.append('cloud_name', 'dretra7g8'); 
-        for (const p of formData) {console.log(p)}
 
         try {
             const response = await fetch(`https://api.cloudinary.com/v1_1/dretra7g8/image/upload`, {
@@ -57,7 +56,6 @@ function AddACat(){
         formData.append('file', file);
         formData.append('upload_preset', 'lzc5ipfk'); 
         formData.append('cloud_name', 'dretra7g8'); 
-        for (const p of formData) {console.log(p)}
 
         try {
             const response = await fetch(`https://api.cloudinary.com/v1_1/dretra7g8/image/upload`, {
