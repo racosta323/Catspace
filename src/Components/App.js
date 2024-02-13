@@ -5,7 +5,9 @@ import { useState, useEffect } from "react"
 
 function App() {
 
-const [cats, setCats] = useState()
+const [cats, setCats] = useState([]); 
+const [searchTerm, setSearchTerm] = useState('');
+
 
 useEffect(()=>{
   fetch("https://catspace.onrender.com/cats")
@@ -18,10 +20,10 @@ useEffect(()=>{
   return (
     <>
       <header>
-        <NavBar cats={cats}/>
+        <NavBar cats={cats} setSearchTerm={setSearchTerm}/>
       </header>
       <main>
-        <Outlet context={cats}/>
+      <Outlet context={{ cats: cats.filter(cat => cat.name.toLowerCase().includes(searchTerm.toLowerCase())), searchTerm }}/>
       </main>
       <footer>
         <Footer/>
