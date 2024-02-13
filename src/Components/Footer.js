@@ -5,7 +5,7 @@ function Footer(){
         <footer>
             <Container fluid>
                <Row className="bg-secondary text-white p-5 mt-3 pb-2">
-                    <Col className="ms-5" xs={4}>
+                    <Col className="mx-5">
                         <Stack>
                             <a href="/">
                                 <Image 
@@ -22,22 +22,34 @@ function Footer(){
                         </Stack>
                     </Col>
 
-                    <Col>
-                        <Nav className="list-group fw-medium fs-5 mt-3">Useful Links
+                    <Col className="d-flex justify-content-center">
+                        <Nav className="list-group fw-normal fs-5 mt-3">Useful Links
                             <NavLink href="/" className="list-group-item bg-secondary text-light border border-0 fs-5 fw-light">Home</NavLink>
                             <NavLink href="/about" className="list-group-item bg-secondary text-light border border-0 fs-5 fw-light">About</NavLink>
                             <NavLink href="/addacat" className="list-group-item bg-secondary text-light border border-0 fs-5 fw-light">Add a cat!</NavLink>
                         </Nav>
                     </Col>
 
-                    <Col>
-                        <ul className="list-group fw-medium fs-5 mt-3">Contact us
+                    <Col className="d-flex justify-content-center">
+                        <ul className="list-group fw-normal fs-5 mt-3">Follow us on GitHub!
                             <li className="list-group-item bg-secondary text-light border border-0 fs-5 fw-light">
-                                {/* figure out how to include GH icon */}
-                                Git repo - Rene
+                                <a href="https://github.com/racosta323" target="_blank">
+                                    <i class="bi bi-github fs-4 text-dark"></i>
+                                </a>{' '}
+                                Rene Acosta
                             </li>
-                            <li className="list-group-item bg-secondary text-light border border-0 fs-5 fw-light">Git repo - Hunter</li>
-                            <li className="list-group-item bg-secondary text-light border border-0 fs-5 fw-light">Git repo - Eve</li>
+                            <li className="list-group-item bg-secondary text-light border border-0 4 fw-light">
+                                <a href="https://github.com/Huntmanjoe" target="_blank">
+                                    <i class="bi bi-github fs-4 text-dark"></i>
+                                </a>{' '}
+                                Hunter Matyi
+                            </li>
+                            <li className="list-group-item bg-secondary text-light border border-0 fs-5 fw-light">
+                                <a href="https://github.com/estritt" target="_blank">
+                                    <i class="bi bi-github fs-4 text-dark"></i>
+                                </a>{' '}
+                                Eve Strittmatter
+                            </li>
                         </ul>
                     </Col>
 
@@ -47,7 +59,7 @@ function Footer(){
                                 <p>Copyright © 2024. All rights reserved.</p>
                             </Col>
                             <Col>
-                                <p className="text-end">Something on the other side</p>
+                                <p className="text-end me-4">“Time spent with cats is never wasted.” – Sigmund Freud</p>
                             </Col>
                         </Row>
                         
