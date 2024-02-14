@@ -46,7 +46,7 @@ function NavBar({ setSearchTerm }) {
                         <Form.Control
                             type="search"
                             placeholder="Search a cat"
-                            className="me-2"
+                            className="me-5"
                             aria-label="Search"
                             onChange={onChangeHandler}
                         />

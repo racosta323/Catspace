@@ -39,10 +39,10 @@ function Home() {
     ];
 
     return (
-        <Container>
-            <Row className="m-4"></Row>
-            <Row className="m-4">
-                <Col className="mt-5">
+        <Container className="px-5">
+            
+            <Row className="mb-4 ps-5">
+                <Col className="mt-2">
                     <Row className="mt-5"></Row>
                     <Row className="mt-5"></Row>
                     <h1 className="fs-1 mt-5">Catspace</h1>
@@ -58,15 +58,14 @@ function Home() {
                         </Col>
                     </Row>
                 </Col>
-                <Col className="mt-5">
+                <Col className="mt-3">
                     <Image
                         src="https://www.fernvet.co.za/wp-content/uploads/2018/02/Cat-White-Background-Images.jpg"
                         alt="cat coming out of wall"
                         height={450}
                     />
                 </Col>
-                <Row className="m-5"></Row>
-                <Row className="m-5"></Row>
+                
                 <Row className="m-5"></Row>
             </Row>
 
