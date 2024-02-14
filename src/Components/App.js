@@ -37,13 +37,15 @@ function App() {
         console.log(index)
         console.log(newCats)
         const removed = newCats.splice(index,1)
-        console.log(newCats)
+        setCats(newCats)
+        navigate("/")
         }
+    
     )
   }     
           // console.log(cats)
           // setCats(cats)
-          // navigate("/")
+          
       
       // if (window.confirm(isConfirmed) == true) {
           
