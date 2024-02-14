@@ -1,6 +1,7 @@
 import { Container, Form, Row, Col, Button } from 'react-bootstrap'
 import React, {useState} from 'react'
 import UploadAvatar from './UploadAvatar';
+import { useNavigate } from "react-router-dom"
 
 function AddACat(){
 
