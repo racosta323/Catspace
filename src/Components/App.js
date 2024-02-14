@@ -6,18 +6,18 @@ import { useState, useEffect } from "react"
 
 function App() {
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
-const [cats, setCats] = useState([]); 
-const [searchTerm, setSearchTerm] = useState('');
+  const [cats, setCats] = useState([]); 
+  const [searchTerm, setSearchTerm] = useState('');
 
 
   useEffect(()=>{
     fetch("https://catspace.onrender.com/cats")
     .then(resp => resp.json())
     .then(data =>setCats(data))
-    .catch(error=>console.log(error))
-  }, [])
+    .catch(error=>console.log(error));
+  }, []);
 
   const deleteCat = (event) => {
     const catId = event.target.value
@@ -42,7 +42,6 @@ const [searchTerm, setSearchTerm] = useState('');
         )
     } 
   }     
-
 
 const context = {
   allCats: cats,

@@ -4,8 +4,6 @@ import { Container, Row, Col, Image, Stack } from 'react-bootstrap'
 
 function About() {
 
-
-
     return (
         <Container>
             <Row>
@@ -99,7 +97,7 @@ function About() {
             </Row>    
 
         </Container>
-    )
+    );
 }
 
 export default About;

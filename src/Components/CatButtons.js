@@ -2,11 +2,9 @@ import { Figure } from "react-bootstrap"
 
 function CatButtons({ name, image, id }){
 
-    
   function handleOnClick(){
     console.log("hello")
   }
-
 
     return (
         <Figure>
@@ -25,8 +23,7 @@ function CatButtons({ name, image, id }){
                 { name }
             </Figure.Caption>
         </Figure> 
-
-    )
+    );
 }
 
-export default CatButtons
+export default CatButtons;

@@ -6,25 +6,25 @@ function Home() {
     const { cats, searchTerm } = useOutletContext();
 
     const addCatButton = (
-    <Col xs={12} sm={6} md={4} lg={3} className="cat-button" key="add-cat">
-        <Button href="/addacat" className="d-block mb-4 h-100 p-0 border-0" variant="outline-light">
-            <Figure className="m-0">
-                <Figure.Image
-                    width={200}
-                    height={180}
-                    alt="Add a cat"
-                    src="https://res.cloudinary.com/djsqcm710/image/upload/f_auto,q_auto/newCatImage_ivzaq2_tf6puy"
-                    roundedCircle
-                    className="mx-5"
-                    style={{opacity:0.6}}
-                />
-                <Figure.Caption className="fs-3 text-center">
-                    Add a cat
-                </Figure.Caption>
-            </Figure>
-        </Button>
-    </Col>
-);
+        <Col xs={12} sm={6} md={4} lg={3} className="cat-button" key="add-cat">
+            <Button href="/addacat" className="d-block mb-4 h-100 p-0 border-0" variant="outline-light">
+                <Figure className="m-0">
+                    <Figure.Image
+                        width={200}
+                        height={180}
+                        alt="Add a cat"
+                        src="https://res.cloudinary.com/djsqcm710/image/upload/f_auto,q_auto/newCatImage_ivzaq2_tf6puy"
+                        roundedCircle
+                        className="mx-5"
+                        style={{opacity:0.6}}
+                    />
+                    <Figure.Caption className="fs-3 text-center">
+                        Add a cat
+                    </Figure.Caption>
+                </Figure>
+            </Button>
+        </Col>
+    );
 
     const filteredCats = searchTerm
         ? cats.filter(cat => cat.name.toLowerCase().includes(searchTerm.toLowerCase()))

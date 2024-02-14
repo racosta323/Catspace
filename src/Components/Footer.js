@@ -64,12 +64,9 @@ function Footer(){
                         </Row>
                         
                </Row>
-            </Container>
-           
-            
+            </Container>  
         </footer>
-
-    )
+    );
 }
 
-export default Footer
+export default Footer;

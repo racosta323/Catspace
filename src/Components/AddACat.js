@@ -168,4 +168,4 @@ function AddACat(){
 }
 
 
-export default AddACat
+export default AddACat;

@@ -8,7 +8,7 @@ function SearchList(){
                 
             </a>
          </li>
-    )
+    );
 }
 
-export default SearchList
+export default SearchList;
