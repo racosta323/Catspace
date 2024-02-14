@@ -36,19 +36,19 @@ function Footer(){
                                 <a href="https://github.com/racosta323" target="_blank">
                                     <i className="bi bi-github fs-4 text-dark"></i>
                                 </a>{' '}
-                                Rene Acosta
+                                <p className="d-inline align-text-bottom">Rene Acosta</p>
                             </li>
                             <li className="list-group-item bg-secondary text-light border border-0 4 fw-light">
                                 <a href="https://github.com/Huntmanjoe" target="_blank">
                                     <i className="bi bi-github fs-4 text-dark"></i>
                                 </a>{' '}
-                                Hunter Matyi
+                                <p className="d-inline align-text-bottom">Hunter Matyi</p>
                             </li>
                             <li className="list-group-item bg-secondary text-light border border-0 fs-5 fw-light">
                                 <a href="https://github.com/estritt" target="_blank">
                                     <i className="bi bi-github fs-4 text-dark"></i>
                                 </a>{' '}
-                                Eve Strittmatter
+                                <p className="d-inline align-text-bottom">Eve Strittmatter</p>
                             </li>
                         </ul>
                     </Col>
