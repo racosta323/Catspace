@@ -86,7 +86,7 @@ function About() {
                 <Col className="m-5 pe-1">
                     <Stack className="col-md-6 mx-auto">
                         <Image
-                            src="https://res.cloudinary.com/djsqcm710/image/upload/v1707950746/PXL_20240214_221839326_p3kmsz.png"
+                            src="/EveDeveloper.jpg"
                             alt="photo of Eve"
                             width={180}
                             // height={180}
