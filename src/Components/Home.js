@@ -13,7 +13,7 @@ function Home() {
                     width={200}
                     height={180}
                     alt="Add a cat"
-                    src="https://www.rd.com/wp-content/uploads/2022/03/GettyImages-509629699-scaled-e1648763472476.jpg?fit=700,466"
+                    src="https://res.cloudinary.com/djsqcm710/image/upload/f_auto,q_auto/newCatImage_ivzaq2_tf6puy"
                     roundedCircle
                     className="mx-5"
                 />
