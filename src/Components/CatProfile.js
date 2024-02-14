@@ -69,7 +69,8 @@ function CatProfile(){
 
             {/* <--Photos button--> */}
                         <Row className="m-3"></Row>
-                        <Button href="#" variant="primary" className="ms-5">Photos</Button>
+                        {/* <Button href="#" variant="primary" className="ms-5">Photos</Button> */}
+                        {/* this will be added back once photos are implemented! */}
                     </Col>
                 </Row>
 
@@ -96,7 +97,7 @@ function CatProfile(){
                         <Card>
                             <Card.Body className="shadow-lg bg-white rounded">
                                 <Card.Text className="fs-2 fw-semibold">COMMENTS</Card.Text>
-                                <Card.Text className="fs-5">Comment 1</Card.Text>
+                                <Card.Text className="fs-5">The comment section is in development!</Card.Text>
                             </Card.Body>
                         </Card>
                     </Col>
