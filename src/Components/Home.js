@@ -6,24 +6,24 @@ function Home() {
     const { cats, searchTerm } = useOutletContext();
 
     const addCatButton = (
-        <Col xs={12} sm={6} md={4} lg={3} className="cat-button" key="add-cat">
-            <a href="/addacat" className="d-block mb-4 h-100">
-                <Figure>
-                    <Figure.Image
-                        width={200}
-                        height={180}
-                        alt="Add a cat"
-                        src="https://www.rd.com/wp-content/uploads/2022/03/GettyImages-509629699-scaled-e1648763472476.jpg?fit=700,466"
-                        roundedCircle
-                        className="mx-5 my-3"
-                    />
-                    <Figure.Caption className="fs-3 text-center">
-                        Add a cat
-                    </Figure.Caption>
-                </Figure>
-            </a>
-        </Col>
-    );
+    <Col xs={12} sm={6} md={4} lg={3} className="cat-button" key="add-cat">
+        <Button href="/addacat" className="d-block mb-4 h-100 p-0 border-0" variant="outline-light">
+            <Figure className="m-0">
+                <Figure.Image
+                    width={200}
+                    height={180}
+                    alt="Add a cat"
+                    src="https://www.rd.com/wp-content/uploads/2022/03/GettyImages-509629699-scaled-e1648763472476.jpg?fit=700,466"
+                    roundedCircle
+                    className="mx-5"
+                />
+                <Figure.Caption className="fs-3 text-center">
+                    Add a cat
+                </Figure.Caption>
+            </Figure>
+        </Button>
+    </Col>
+);
 
     const filteredCats = searchTerm
         ? cats.filter(cat => cat.name.toLowerCase().includes(searchTerm.toLowerCase()))

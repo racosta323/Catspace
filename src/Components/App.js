@@ -32,6 +32,7 @@ const [searchTerm, setSearchTerm] = useState('');
         })
         .then(response => response.json())
         .then(data =>{
+          console.log(data)
           let newCats = [...cats]
           const index = cats.indexOf(catId)
           const removed = newCats.splice(index,1)
@@ -45,7 +46,9 @@ const [searchTerm, setSearchTerm] = useState('');
 
 const context = {
   allCats: cats,
-  deleteCat: deleteCat
+  deleteCat: deleteCat,
+  cats: cats.filter(cat => cat.name.toLowerCase().includes(searchTerm.toLowerCase())),
+  searchTerm
   
 }
 
@@ -55,7 +58,7 @@ const context = {
         <NavBar cats={cats} setSearchTerm={setSearchTerm}/>
       </header>
       <main>
-      <Outlet context={{ cats: cats.filter(cat => cat.name.toLowerCase().includes(searchTerm.toLowerCase())), searchTerm }}/>
+      <Outlet context={context}/>
       </main>
       <footer>
         <Footer/>
