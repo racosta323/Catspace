@@ -1,7 +1,11 @@
 import { Container, Form, Row, Col, Button } from 'react-bootstrap'
 import React, {useState} from 'react'
+import { useNavigate } from 'react-router-dom'
 
 function AddACat(){
+
+    const navigate = useNavigate()
+
     const [formData, setFormData] = useState({
         name: '',
         livesIn: '',
@@ -40,9 +44,6 @@ function AddACat(){
             setFormData((prevFormData) => ({
                 ...prevFormData,
                 [name + 'Url']: data.secure_url, 
-
-
-
             }));
         } catch (error) {
             console.error('Error uploading image:', error);
@@ -51,30 +52,24 @@ function AddACat(){
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log("Form submitted");
-
-        try {
-            const response = await fetch('https://catspace.onrender.com/cats', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    name: formData.name,
-                    livesIn: formData.livesIn,
-                    originallyFrom: formData.originallyFrom,
-                    nickname: formData.nickname,
-                    profilePhoto: formData.profilePhotoUrl,
-                    bannerPhoto: formData.bannerPhotoUrl,
-                }),
-            });
-
-            if (!response.ok) throw new Error('Network response was not ok');
-            
-            console.log("Submission successful");
-            const result = await response.json();
-            console.log("Result:", result);
-
+        
+        fetch('https://catspace.onrender.com/cats',{
+            method: "POST",
+            headers: {
+                'Content-type': 'application/json'
+            },
+            body: JSON.stringify({
+                name: formData.name,
+                livesIn: formData.livesIn,
+                originallyFrom: formData.originallyFrom,
+                nickname: formData.nickname,
+                profilePhoto: formData.profilePhotoUrl,
+                bannerPhoto: formData.bannerPhotoUrl,
+            })
+        })
+        .then(resp=>resp.json())
+        .then(data=>{
+            navigate(`/profile/${data.id}`)
             setFormData({
                 name: '',
                 livesIn: '',
@@ -83,13 +78,9 @@ function AddACat(){
                 profilePhotoUrl: '',
                 bannerPhotoUrl: '',
             });
-        } catch (error) {
-            console.error('Error during form submission:', error);
-        }
+        })
     };
     
-
-
 
     return(
         <Container className='my-4'>
