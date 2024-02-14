@@ -19,7 +19,7 @@ function ErrorPage(){
                 <Col></Col>
             </Row>
         </>
-    )
+    );
 }
 
-export default ErrorPage
+export default ErrorPage;

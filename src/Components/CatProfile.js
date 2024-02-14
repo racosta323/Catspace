@@ -3,35 +3,31 @@ import { useNavigate, useParams } from "react-router-dom"
 import { useState, useEffect } from "react"
 import { useOutletContext } from "react-router-dom"
 
-
-
 function CatProfile(){
 
-    const {deleteCat} = useOutletContext()
+    const {deleteCat} = useOutletContext();
 
-    const [cat, setCat] = useState(null)
+    const [cat, setCat] = useState(null);
 
-    const params = useParams()
-    const catId = params.id
+    const params = useParams();
+    const catId = params.id;
     
     useEffect(()=>{
         fetch(`https://catspace.onrender.com/cats/${catId}`)
         .then (resp => resp.json())
         .then(data => setCat(data))
-        .catch(error=>console.log(error))
-    }, [catId])
+        .catch(error=>console.log(error));
+    }, [catId]);
 
-    const renderBanner = (cat===null) ? null : cat.bannerPhoto
-    const renderProfilePhoto = (cat===null) ? null : cat.profilePhoto
-    const renderName = (cat===null) ? null : cat.name
-    const renderLocation = (cat===null) ? null : cat.livesIn
-    const renderOriginallyFrom = (cat===null) ? null : cat.originallyFrom
-    const renderNickname = (cat===null) ? null : cat.nickname
-    const renderPronounces = (cat===null) ? null : cat.pronounced
-
+    const renderBanner = (cat===null) ? null : cat.bannerPhoto;
+    const renderProfilePhoto = (cat===null) ? null : cat.profilePhoto;
+    const renderName = (cat===null) ? null : cat.name;
+    const renderLocation = (cat===null) ? null : cat.livesIn;
+    const renderOriginallyFrom = (cat===null) ? null : cat.originallyFrom;
+    const renderNickname = (cat===null) ? null : cat.nickname;
+    const renderPronounces = (cat===null) ? null : cat.pronounced;
 
     const navigate = useNavigate();   
-
 
     return(
         <Container fluid className="p-5 mt-4">
@@ -111,10 +107,8 @@ function CatProfile(){
                 
             </Container>
         </Container>
-
-
-    )
+    );
 }
 
-export default CatProfile
+export default CatProfile;
 

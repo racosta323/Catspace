@@ -1,8 +1,15 @@
 import { Navbar, Form, Nav, Image, NavLink, Stack, Col, Row } from 'react-bootstrap';
+import { useNavigate } from "react-router-dom"
 
 function NavBar({ setSearchTerm }) {
+    const navigate = useNavigate()
     const onChangeHandler = (e) => {
         setSearchTerm(e.target.value);
+    };
+    const onSearchSubmit = (e) => {
+        console.log('asdf')
+        e.preventDefault();
+        navigate(`/`);
     };
 
     return (
@@ -35,7 +42,7 @@ function NavBar({ setSearchTerm }) {
                         <NavLink className="text-light fw-light" href="/addacat">Add a cat!</NavLink>
                     </Nav>
                    
-                    <Form className="d-flex">
+                    <Form className="d-flex" onSubmit={onSearchSubmit}>
                         <Form.Control
                             type="search"
                             placeholder="Search a cat"

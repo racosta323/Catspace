@@ -6,18 +6,18 @@ import { useState, useEffect } from "react"
 
 function App() {
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
-const [cats, setCats] = useState([]); 
-const [searchTerm, setSearchTerm] = useState('');
+  const [cats, setCats] = useState([]); 
+  const [searchTerm, setSearchTerm] = useState('');
 
 
   useEffect(()=>{
     fetch("https://catspace.onrender.com/cats")
     .then(resp => resp.json())
     .then(data =>setCats(data))
-    .catch(error=>console.log(error))
-  }, [])
+    .catch(error=>console.log(error));
+  }, []);
 
   const deleteCat = (event) => {
     const catId = event.target.value
@@ -32,6 +32,7 @@ const [searchTerm, setSearchTerm] = useState('');
         })
         .then(response => response.json())
         .then(data =>{
+          console.log(data)
           let newCats = [...cats]
           const index = cats.indexOf(catId)
           const removed = newCats.splice(index,1)
@@ -42,10 +43,11 @@ const [searchTerm, setSearchTerm] = useState('');
     } 
   }     
 
-
 const context = {
   allCats: cats,
-  deleteCat: deleteCat
+  deleteCat: deleteCat,
+  cats: cats.filter(cat => cat.name.toLowerCase().includes(searchTerm.toLowerCase())),
+  searchTerm
   
 }
 
@@ -55,7 +57,7 @@ const context = {
         <NavBar cats={cats} setSearchTerm={setSearchTerm}/>
       </header>
       <main>
-      <Outlet context={{ cats: cats.filter(cat => cat.name.toLowerCase().includes(searchTerm.toLowerCase())), searchTerm }}/>
+      <Outlet context={context}/>
       </main>
       <footer>
         <Footer/>

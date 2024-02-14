@@ -7,8 +7,8 @@ function UploadAvatar({ handleAvatarChange }) {
     const [ src, setSrc ] = useState('/cat_placeholder.png');
     const [ preview, setPreview ] = useState(null);
 
-    const onCrop = view => {setPreview(view); handleAvatarChange(view)}
-    const onClose = () => {setPreview(null);}
+    const onCrop = view => {setPreview(view); handleAvatarChange(view)};
+    const onClose = () => {setPreview(null);};
 
     async function getRandomCatImage() { // i am using await instead of .then because i want the function to return something. if i made another state for the cat i could use then
         try {
@@ -76,7 +76,7 @@ function UploadAvatar({ handleAvatarChange }) {
                 </Row>
             </div>
         </div>
-    )
+    );
 }
 
 export default UploadAvatar;
