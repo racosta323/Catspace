@@ -15,8 +15,6 @@ function AddACat(){
         profilePhotoUrl: '', 
         bannerPhotoUrl: '', 
     })
-    const [profilePhotoUrl, setProfilePhoto] = useState(null);
-    const [bannerPhotoUrl, setBannerPhoto] = useState(null);
 
     const handleInputChange = (e) => {
         const {name, value} = e.target;
