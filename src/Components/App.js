@@ -8,7 +8,9 @@ function App() {
 
   const navigate = useNavigate()
 
-  const [cats, setCats] = useState()
+const [cats, setCats] = useState([]); 
+const [searchTerm, setSearchTerm] = useState('');
+
 
   useEffect(()=>{
     fetch("https://catspace.onrender.com/cats")
@@ -50,10 +52,10 @@ const context = {
   return (
     <>
       <header>
-        <NavBar cats={cats}/>
+        <NavBar cats={cats} setSearchTerm={setSearchTerm}/>
       </header>
       <main>
-        <Outlet context={context}/>
+      <Outlet context={{ cats: cats.filter(cat => cat.name.toLowerCase().includes(searchTerm.toLowerCase())), searchTerm }}/>
       </main>
       <footer>
         <Footer/>

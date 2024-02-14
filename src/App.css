@@ -1,5 +1,3 @@
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
-
 /* .cat-cards {
     margin: 5rem;
     padding: 2rem;
@@ -50,6 +48,7 @@
   width: 100%;
   height: auto;
   border-radius: 8px;
+}
 .cat-card {
     display: block;
     margin: auto;
@@ -90,7 +89,7 @@ note the profile pic class is for catcards on the home page, the profile pic id 
 
 #profile-banner {
     padding-bottom: 50px;
-}
+} */
     
 .developers {
   text-align: center;
@@ -132,7 +131,7 @@ h3 {
 
 .SomethingAbout {
   margin-top: 50px;
-} */
+}
 
 .image-size {
   height: 380px;
@@ -145,4 +144,3 @@ Figure.Image{
  height:200;
  width: 200 
 }
-

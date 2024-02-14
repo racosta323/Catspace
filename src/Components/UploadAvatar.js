@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import Avatar from 'react-avatar-edit';
+import { Button, Row } from 'react-bootstrap'
 
-function UploadAvatar() {
+function UploadAvatar({ handleAvatarChange }) {
 
     const [ src, setSrc ] = useState('/cat_placeholder.png');
     const [ preview, setPreview ] = useState(null);
 
-    const onCrop = view => {setPreview(view);}
+    const onCrop = view => {setPreview(view); handleAvatarChange(view)}
     const onClose = () => {setPreview(null);}
 
     async function getRandomCatImage() { // i am using await instead of .then because i want the function to return something. if i made another state for the cat i could use then
@@ -24,24 +25,56 @@ function UploadAvatar() {
     const setRandomCatImage = async () => {
         const randomCatImageUrl = await getRandomCatImage();
         if (randomCatImageUrl) {
-            console.log(randomCatImageUrl)
-            setSrc(randomCatImageUrl)
-            setPreview(randomCatImageUrl)
+            console.log('got image: ' + randomCatImageUrl);
+            setSrc(randomCatImageUrl);
+            setPreview(randomCatImageUrl);
         }
     };
 
     useEffect(()=>{setRandomCatImage()}, []);
 
+    const onUserUpload = async (e) => { 
+        const { name, files } = e.target;
+        const file = files[0];
+        if (!file) return;
+
+        const formData = new FormData();
+        formData.append('file', file);
+        formData.append('upload_preset', 'lzc5ipfk'); 
+        formData.append('cloud_name', 'dretra7g8'); 
+
+        try {
+            const response = await fetch(`https://api.cloudinary.com/v1_1/dretra7g8/image/upload`, {
+                method: 'POST',
+                body: formData,
+            });
+            const data = await response.json();
+            setSrc(data.secure_url);
+            setPreview(data.secure_url);
+        } catch (error) {
+            console.error('Error uploading image:', error);
+        }
+    }
+
     return (
-        <div>
-            <Avatar
-                width={300}
-                height={300}
-                onCrop={onCrop}
-                onClose={onClose}
-                src={src}
-            />
-            <button onClick={setRandomCatImage}>Use a Random Cat</button>
+        <div className="d-flex justify-content-center">
+                <Avatar
+                    width={src.clientWidth}
+                    height={300}
+                    onCrop={onCrop}
+                    onClose={onClose}
+                    src={src}
+                />
+            <div>
+                <Row><Button className='ms-5 mb-2' onClick={setRandomCatImage}>Load a Random Cat</Button></Row>
+                {/* <Row><Button className='ms-5 mb-2' >Upload Your Cat</Button></Row> */}
+                <Row>
+                    <label className='btn btn-primary ms-5 mb-2' for='avatar-upload'>
+                        <input id='avatar-upload' type='file' accept='image/*' style={{display:'none'}} onChangeCapture={onUserUpload}/>
+                        <span>Upload Your Cat</span>
+                    </label>
+                </Row>
+            </div>
         </div>
     )
 }

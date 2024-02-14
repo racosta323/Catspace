@@ -1,51 +1,17 @@
-import {Navbar, Form, Button, Nav, Image, NavLink, Stack, Col, Row } from 'react-bootstrap'
-import { useState } from "react" 
-import { useNavigate } from "react-router-dom"
+import { Navbar, Form, Nav, Image, NavLink, Stack, Col, Row } from 'react-bootstrap';
 
-function NavBar({ cats }){
+function NavBar({ setSearchTerm }) {
+    const onChangeHandler = (e) => {
+        setSearchTerm(e.target.value);
+    };
 
-    // cats is from other component
-   
-
-    const [search, setSearch] = useState("")
-    const navigate = useNavigate()
-
-    function onChangeHandler(e){
-        setSearch(e.target.value)
-    }
-
-    const lowerCaseSearch = search.toLowerCase()
-    
-    function onClickHandler(){
-
-        if(cats !== undefined){
-            
-            const filteredCat = cats.filter((cat)=>{
-                const lowerCaseCat = cat.name.toLowerCase()
-                if(lowerCaseCat===lowerCaseSearch) return true
-                }
-            )
-            const catId = filteredCat[0].id
-            navigate(`/profile/${catId}`)
-            setSearch("")
-        }
-    }
-
-    
-
-
-    return(
+    return (
         <>
-            <Navbar 
-                bg="primary" 
-                data-bs-theme="light" 
-                className='justify-content-between p-2'
-                sticky="top"
-            >
+            <Navbar bg="primary" data-bs-theme="light" className='justify-content-between p-2' sticky="top">
                 <a href="/">
                     <Image 
                         src="https://shorturl.at/pxDY6"
-                        alt="UPDATE THIS"
+                        alt="Logo"
                         roundedCircle
                         width={100}
                         height={100}
@@ -63,39 +29,25 @@ function NavBar({ cats }){
                 </Row>
     
                 <Navbar.Collapse>
-                    <Nav
-                        className="me-auto my-2 my-lg-0"
-                        style={{ maxHeight: '100px' }}
-                    >
+                    <Nav className="me-auto my-2 my-lg-0" style={{ maxHeight: '100px' }}>
                         <NavLink className="text-light fw-light" href="/">Home</NavLink>
                         <NavLink className="text-light fw-light" href="/about">About</NavLink>
                         <NavLink className="text-light fw-light" href="/addacat">Add a cat!</NavLink>
                     </Nav>
                    
-                    {/*Search a cat*/}
-
-                    <Form className="d-flex p-4">
+                    <Form className="d-flex">
                         <Form.Control
                             type="search"
                             placeholder="Search a cat"
                             className="me-2"
                             aria-label="Search"
-                            value={search}
                             onChange={onChangeHandler}
                         />
-                        <ul>
-                            {/* <li>Something</li> */}
-                        </ul>
-                       
-                        <Button variant="dark" onClick={onClickHandler}>Search</Button>
-
-
-                    </Form>                    
-
+                    </Form>
                 </Navbar.Collapse>
             </Navbar>
         </>
-    )
+    );
 }
 
-export default NavBar
+export default NavBar;
