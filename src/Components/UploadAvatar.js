@@ -71,7 +71,7 @@ function UploadAvatar({ handleAvatarChange }) {
                 <Row>
                     <label className='btn btn-primary ms-5 mb-2' for='avatar-upload'>
                         <input id='avatar-upload' type='file' accept='image/*' style={{display:'none'}} onChangeCapture={onUserUpload}/>
-                        <span>Upload Your Cat</span>
+                        <span>Upload Your Own Cat</span>
                     </label>
                 </Row>
             </div>
