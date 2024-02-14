@@ -111,7 +111,7 @@ function About() {
                         Tasked with creating a single page application from scratch using the React library while at <a href="https://flatironschool.com/courses/coding-bootcamp/">Flatiron School's Software Engineering Bootcamp</a> in 2024, Rene, Hunter, and Eve's shared interest in cats inspired the development of this app. 
                     </p>
                     <p className="text-center">
-                        The app uses client-side routing and navigation tools to help users get around easily. Users will also see that they can contribute to our cat library by creating profile(s) for their own cat(s)! Check out our README for more details on app functions and navigation.
+                        The app uses client-side routing and navigation tools to help users get around easily. Users will also see that they can contribute to our cat library by creating profile(s) for their own cat(s)! Check out our <a href='https://github.com/racosta323/her-phase-2-project-catspace/tree/main'>README</a> for more details on app functions and navigation.
                     </p>
                     <p className="text-center">
                         We hope you have as much fun navigating the site as we did creating it!
