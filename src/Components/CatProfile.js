@@ -47,8 +47,11 @@ function CatProfile(){
                 <Image
                     src={ renderBanner }
                     alt="something"
-                    fluid
-                    style={{ height: '475px'}}
+                    // fluid
+                    style={{ 
+                        height: '475px',
+                        'object-fit': 'cover'
+                    }}
                 />
 
                 <Row className="m-5"></Row>
