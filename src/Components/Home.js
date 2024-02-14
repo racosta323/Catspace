@@ -10,7 +10,7 @@ function Home() {
             <a href="/addacat" className="d-block mb-4 h-100">
                 <Figure>
                     <Figure.Image
-                        width={171}
+                        width={200}
                         height={180}
                         alt="Add a cat"
                         src="https://www.rd.com/wp-content/uploads/2022/03/GettyImages-509629699-scaled-e1648763472476.jpg?fit=700,466"
@@ -30,7 +30,6 @@ function Home() {
         : cats;
 
     const renderCats = [
-        addCatButton,
         ...filteredCats.map(cat => (
             <Col xs={12} sm={6} md={4} lg={3} className="cat-button" key={cat.id}>
                 <CatButtons name={cat.name} image={cat.profilePhoto} id={cat.id} />
@@ -68,41 +67,12 @@ function Home() {
                 <Row className="m-5"></Row>
             </Row>
 
-
-
-
-            <a id="half"></a>
-                <Row className="bg-light border p-5">
-                    <Col className="ms-4">
-
-                    {/* add a cat button */}
-                        <a href="/addacat">
-                            <Figure>
-                                <Figure.Image
-                                    src="https://res.cloudinary.com/djsqcm710/image/upload/f_auto,q_auto/newCatImage_ivzaq2"
-                                    alt="something"
-                                    roundedCircle
-                                    className="mx-5"
-                                    width={200}
-                                    height={180}
-                                />
-                                <Figure.Caption className="fs-3 mx-5 text-center mb-5">
-                                    Add a cat
-                                </Figure.Caption>
-                            </Figure>  
-                        </a>    
-
-                    {/* new cats here */}
-                    
-                    { renderCats }
-                        
-
-                        
-                    </Col>
-                </Row>
-            
-       </Container>
-    )
+            <Row className="bg-light border p-5"id="half">
+                {addCatButton}
+                {renderCats}
+            </Row>
+        </Container>
+    );
 }
 
 export default Home;
