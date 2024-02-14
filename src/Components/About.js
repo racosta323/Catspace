@@ -14,7 +14,16 @@ function About() {
             <Row>
                 <Col md={{ span: 5, offset: 1 }} className="m-5, p-5">
                     <h2 className="fw-bold my-5">About The Site!</h2>
-                    <p>All work and no play makes Jack a dull boyAll work and no play makes Jack a dull boyAll work and no play makes Jack a dull boyAll work and no play makes Jack a dull boyAll work and no play makes Jack a dull boyAll work and no play makes Jack a dull boyAll work and no play makes Jack a dull boy</p>
+                    <p>
+                        There are an estimated <a href="https://www.reference.com/pets-animals/many-cats-world-4d3ed6a78c600697">600 million cats</a> in the world that all need love, attention and snuggles. 
+                        It's almost impossible to keep track of them all!
+                    </p>
+                    <p>
+                        With that in mind, Catspace© was developed to ensure that every cat has a chance to connect with cat lovers around the world.
+                    </p>
+                    <p>
+                        Check out cats from around the world and create and share your own cat's profile with the rest of the cat community!
+                    </p>
                 </Col>
                 <Col className="m-5, p-5">
                     <Image 
@@ -53,7 +62,7 @@ function About() {
                             roundedCircle
                         />
                         <h3 className="text-center">Rene Acosta</h3>
-                        <p className="text-center">All work and no play makes Jack a dull boy</p>
+                        <p className="text-center">Cat lover since 2012, Rene is owned by two fluffy female felines.</p>
                     </Stack>
                 </Col>
 
@@ -92,12 +101,20 @@ function About() {
             </Row>
             
             <Row>
-                <Col className="m-5, p-5">
-                    <h3 className="text-center fw-bold">Something About the Project</h3>
-                    <p className="text-center">All work and no play makes Jack a dull boyAll work and no play makes Jack a dull boyAll work and no play makes Jack a dull boyAll work and no play makes Jack a dull boyAll work and no play makes Jack a dull boyAll work and no play makes Jack a dull boyAll work and no play makes Jack a dull boyAll work and no play makes Jack a dull boyAll work and no play makes Jack a dull boyAll work and no play makes Jack a dull boy</p>
+                <Col className="m-5, p-3">
+                    <h3 className="text-center fw-bold">Project Background</h3>
+                    <br/>
+                    <p className="text-center">
+                        Tasked with creating a single page application from scratch using the React library while at <a href="https://flatironschool.com/courses/coding-bootcamp/">Flatiron School's Software Engineering Bootcamp</a> in 2024, Rene, Hunter, and Eve's shared interest in cats inspired the development of this app. 
+                    </p>
+                    <p className="text-center">
+                        The app uses client-side routing and navigation tools to help users get around easily. Users will also see that they can contribute to our cat library by creating profile(s) for their own cat(s)! Check out our README for more details on app functions and navigation.
+                    </p>
+                    <p className="text-center">
+                        We hope you have as much fun navigating the site as we did creating it!
+                    </p>
                 </Col>
             </Row>    
-
         </Container>
     )
 }
