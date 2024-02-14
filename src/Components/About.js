@@ -2,6 +2,8 @@ import React from "react"
 import '../App.css';
 import { Container, Row, Col, Image, Stack } from 'react-bootstrap'
 
+
+
 function About() {
 
     return (
@@ -68,14 +70,14 @@ function About() {
                 <Col className="m-5 pe-1">
                     <Stack className="col-md-6 mx-auto">
                         <Image
-                            src="https://cdn.outsideonline.com/wp-content/uploads/2020/10/29/hunting-for-beginners-lead_s.jpg"
+                            src="/HunterDeveloper.jpg"
                             alt="photo of Hunter"
                             width={171}
                             height={180}
                             roundedCircle
                         />
                         <h3 className="text-center">Hunter Matyi</h3>
-                        <p className="text-center">All work and no play makes Jack a dull boy</p>
+                        <p className="text-center">Always has 3 cats. Never 2, never 4.</p>
                     </Stack> 
                 </Col>
                 
