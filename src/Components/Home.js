@@ -15,7 +15,7 @@ function Home() {
                         alt="Add a cat"
                         src="https://res.cloudinary.com/djsqcm710/image/upload/f_auto,q_auto/newCatImage_ivzaq2_tf6puy"
                         roundedCircle
-                        className="mx-5"
+                        className="mx-auto"
                         style={{opacity:0.6}}
                     />
                     <Figure.Caption className="fs-3 text-center">

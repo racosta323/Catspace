@@ -60,6 +60,7 @@ function About() {
                             width={171}
                             height={180}
                             roundedCircle
+                            style={{ alignSelf: 'center' }}
                         />
                         <h3 className="text-center">Rene Acosta</h3>
                         <p className="text-center">Cat lover since 2012, Rene is owned by two fluffy female felines.</p>
@@ -75,6 +76,7 @@ function About() {
                             width={171}
                             height={180}
                             roundedCircle
+                            style={{ alignSelf: 'center' }}
                         />
                         <h3 className="text-center">Hunter Matyi</h3>
                         <p className="text-center">Always has 3 cats. Never 2, never 4.</p>
@@ -89,6 +91,7 @@ function About() {
                             width={180}
                             // height={180}
                             roundedCircle
+                            style={{ alignSelf: 'center' }}
                         />
                         <h3 className="text-center">Eve Strittmatter</h3>
                         <p className="text-center">Eve has always lived with cats, so she has never had untorn clothing.</p>

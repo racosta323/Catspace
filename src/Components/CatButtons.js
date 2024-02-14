@@ -8,7 +8,7 @@ function CatButtons({ name, image, id }){
 
     return (
         <Figure>
-            <a href={`/profile/${id}`}>
+            <a href={`/profile/${id}`} className='d-flex justify-content-center'>
                 <Figure.Image
                     src={ image }
                     alt="something"
