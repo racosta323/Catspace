@@ -157,10 +157,10 @@ function AddACat(){
                             <Form.Label>Originally From:</Form.Label>    
                             <InputGroup hasValidation>
                                 <Form.Control required type="text" placeholder="Enter origin"name="originallyFrom"  value={formData.originallyFrom} onChange={handleInputChange}></Form.Control>
+                                <Form.Control.Feedback type="invalid">
+                                        Please enter a place where your cat is originally from.
+                                </Form.Control.Feedback>
                             </InputGroup>
-                            <Form.Control.Feedback type="invalid">
-                                    Please enter a place where your cat is originally from.
-                            </Form.Control.Feedback>
                         </Form.Group>
 
                         <Form.Group className='mb-3' controlId='formBasicNickname'>
