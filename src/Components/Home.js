@@ -39,15 +39,17 @@ function Home() {
     ];
 
     return (
-        <Container>
-            <Row className="m-4"></Row>
-            <Row className="m-4">
-                <Col className="mt-5">
+        <Container className="px-5">
+            
+            <Row className="mb-4 ps-5">
+                <Col className="mt-2">
                     <Row className="mt-5"></Row>
                     <Row className="mt-5"></Row>
-                    <h1 className="fs-1 mt-5">Behold</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br/>
-                        Donec nulla metus, commodo nec augue vel, lacinia consequat eros.</p>
+                    <h1 className="fs-1 mt-5">Catspace</h1>
+                    <br/>
+                    <p>It's kind of like Myspace®...but with <strong>cats!</strong><br/>
+                    <br/>
+                        Check out our furry feline friends below, <br/> then add your own to the litter!</p>
                     <Row className="mb-5"></Row>
                     <Row className="mb-5">
                         <Col>
@@ -56,15 +58,14 @@ function Home() {
                         </Col>
                     </Row>
                 </Col>
-                <Col>
+                <Col className="mt-3">
                     <Image
                         src="https://www.fernvet.co.za/wp-content/uploads/2018/02/Cat-White-Background-Images.jpg"
                         alt="cat coming out of wall"
                         height={450}
                     />
                 </Col>
-                <Row className="m-5"></Row>
-                <Row className="m-5"></Row>
+                
                 <Row className="m-5"></Row>
             </Row>
 
