@@ -82,14 +82,14 @@ function About() {
                 <Col className="m-5 pe-1">
                     <Stack className="col-md-6 mx-auto">
                         <Image
-                            src="https://upload.wikimedia.org/wikipedia/commons/5/53/Eve_2011_cropped.jpg"
+                            src="https://res.cloudinary.com/djsqcm710/image/upload/v1707950746/PXL_20240214_221839326_p3kmsz.png"
                             alt="photo of Eve"
-                            width={170}
-                            height={180}
+                            width={180}
+                            // height={180}
                             roundedCircle
                         />
                         <h3 className="text-center">Eve Strittmatter</h3>
-                        <p className="text-center">All work and no play makes Jack a dull boy</p>
+                        <p className="text-center">Eve has always lived with cats, so she has never had untorn clothing.</p>
                     </Stack>
                 </Col>
             </Row>
