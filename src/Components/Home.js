@@ -65,8 +65,6 @@ function Home() {
                         height={450}
                     />
                 </Col>
-                
-                <Row className="m-5"></Row>
             </Row>
 
             <Row className="bg-light border p-5"id="half">
