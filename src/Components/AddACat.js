@@ -152,7 +152,7 @@ function AddACat(){
                         <Form.Group className='mb-3' controlId='formBasicName'>
                             <Form.Label>Pronounciation:</Form.Label>
                             <InputGroup hasValidation>
-                                <Form.Control type="text" placeholder="Enter name pronounciation" name="pronounce" onChange={handleInputChange} value={formData.pronounced}  required></Form.Control>
+                                <Form.Control type="text" placeholder="Enter name pronounciation" name="pronounced" onChange={handleInputChange} value={formData.pronounced}  required></Form.Control>
                                 <Form.Control.Feedback type="invalid">
                                     Please enter a name.
                                 </Form.Control.Feedback>

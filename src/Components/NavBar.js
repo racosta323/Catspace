@@ -17,7 +17,7 @@ function NavBar({ setSearchTerm }) {
             <Navbar bg="primary" data-bs-theme="light" className='justify-content-between p-2' sticky="top">
                 <a href="/">
                     <Image 
-                        src="./Logo.jpg"
+                        src={`${process.env.PUBLIC_URL}/Logo.jpg`}
                         alt="Logo"
                         roundedCircle
                         width={100}

@@ -51,7 +51,7 @@ function CatProfile(){
                     // fluid
                     style={{ 
                         height: '475px',
-                        'object-fit': 'cover'
+                        'objectFit': 'cover'
                     }}
                 />
 
