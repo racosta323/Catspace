@@ -96,8 +96,8 @@ function CatProfile(){
                     <Col className="my-4 ps-5">
                         <Card>
                             <Card.Body className="shadow-lg bg-white rounded">
-                                <Card.Text className="fs-2 fw-semibold">COMMENTS</Card.Text>
-                                <Card.Text className="fs-5">The comment section is in development!</Card.Text>
+                                <Card.Text className="fs-2 fw-semibold">DESCRIPTION</Card.Text>
+                                <Card.Text className="fs-5">Description!</Card.Text>
                             </Card.Body>
                         </Card>
                     </Col>

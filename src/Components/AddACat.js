@@ -171,6 +171,14 @@ function AddACat(){
                             </Form.Control.Feedback>
                         </Form.Group>
 
+                        <Form.Group className='mb-3' controlId='formBasicNickname'>
+                            <Form.Label>Description:</Form.Label>
+                            <Form.Control required type="text" placeholder="Enter Nickname" name="nickname"value={formData.nickname} onChange={handleInputChange}></Form.Control>
+                            <Form.Control.Feedback type="invalid">
+                                    Please enter a nickname.
+                            </Form.Control.Feedback>
+                        </Form.Group>
+
                         <Form.Group className='mb-3' controlId='formBasicProfilePhoto'>
                             <Form.Label>Upload Profile Photo:</Form.Label>
                             {/* <Form.Control className='margins-auto' type="file" name="profilePhoto"onChange={handleFileChange}></Form.Control> */}
