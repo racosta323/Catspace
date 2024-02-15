@@ -26,7 +26,7 @@ function CatProfile(){
     const renderOriginallyFrom = (cat===null) ? null : cat.originallyFrom;
     const renderNickname = (cat===null) ? null : cat.nickname;
     const renderPronounces = (cat===null) ? null : cat.pronounced;
-    //const renderDescription = cat ===null) ? null : cat.description
+    const renderDescription = (cat ===null) ? null : cat.description
 
     const navigate = useNavigate();   
 
@@ -98,8 +98,7 @@ function CatProfile(){
                         <Card>
                             <Card.Body className="shadow-lg bg-white rounded">
                                 <Card.Text className="fs-2 fw-semibold">DESCRIPTION</Card.Text>
-                                {/* description tag to go here {renderDescription}*/}
-                                <Card.Text className="fs-5">Description!</Card.Text>
+                                <Card.Text className="fs-5">{ renderDescription }</Card.Text>
                             </Card.Body>
                         </Card>
                     </Col>

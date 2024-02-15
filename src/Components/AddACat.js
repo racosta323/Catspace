@@ -105,8 +105,8 @@ function AddACat(){
                     nickname: formData.nickname,
                     profilePhoto: formData.profilePhotoUrl,
                     bannerPhoto: formData.bannerPhotoUrl,
-                    //description: formData.description
-                    //pronounced: formData.pronounced
+                    description: formData.description,
+                    pronounced: formData.pronounced
                 })
             })
             .then(resp=>resp.json())
