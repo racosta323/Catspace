@@ -1,4 +1,4 @@
-# Welcome to CatSpace! 
+# Welcome to Catspace! 
 
 This project was made by Hunter Matyi, Eve Strittmatter, and Rene Acosta in the [Flatiron School](https://flatironschool.com/courses/coding-bootcamp/)'s 2024 Software Engineering Bootcamp as an exercise in a creating single-page application. This is achieved with React routing, namely the createBrowserRouter and RouterProvider functions. Beyond this minimal requirement, we've made frequent use of bootstrap styling, a separately hosted database, and a publicly available API. The frontend is hosted on [Netlify](https://www.netlify.com/) and the backend on [Render](https://render.com/). 
 
@@ -19,4 +19,4 @@ Here you can see the details of a cat that are not visible on the homepage. The 
 
 ### About Page
 
-Here we have some info about the site and its developers, as well as some useful links. We hope you enjoy the site! 
+Here we have some info about the site and its developers, as well as some useful links. We hope you enjoy Catspace! 
