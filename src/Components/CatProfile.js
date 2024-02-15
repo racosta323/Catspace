@@ -39,18 +39,13 @@ function CatProfile(){
         }
      })
 
-     
-
-     const commentNames = comments.map(comment=>comment.name)
 
      const [allComments, setAllComments] = useState(comments)
     
      function onAddComments(newComment){
          setAllComments(newComment)
-         console.log(renderName)
- 
-         console.log(renderComment.comment)
-         return <CommentContainer comment={renderComment}/>
+         const newComments = [...allComments, newComment]
+         console.log(newComments)
      }
     
 
