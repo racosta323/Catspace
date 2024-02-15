@@ -9,7 +9,7 @@ function Footer(){
                         <Stack>
                             <a href="/">
                                 <Image 
-                                src="https://shorturl.at/pxDY6"
+                                src="./Logo.jpg"
                                 alt="UPDATE THIS"
                                 roundedCircle
                                 width={125}
