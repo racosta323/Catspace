@@ -53,15 +53,13 @@ function CatProfile(){
 
 //---------------------------
     const renderComment = comments.find((comment)=>{
-
-
         if(renderName===comment.name){
             return true
         }
-       
-        
-        console.log(comment.comment)
+       return comment
      })
+
+     
 //---------------------------
 
     return(
@@ -102,9 +100,9 @@ function CatProfile(){
                         <h4 className="ms-5"> Pronounces Name: "{ renderPronounces }" </h4>
                         <h3 className="ms-5">{ renderLocation }</h3>
 
-            {/* <--Photos button--> */}
-                        <Row className="m-3"></Row>
-                        <Button href="#" variant="primary" className="ms-5">Photos</Button>
+                    {/* <--Photos button--> */}
+                        {/* <Row className="m-3"></Row>
+                        <Button href="#" variant="primary" className="ms-5">Photos</Button> */}
                     </Col>
                 </Row>
 
@@ -128,7 +126,7 @@ function CatProfile(){
             {/* <--Comments section--> */}
                 <Row className="mx-5 mb-0">
                     <Col className="my-3 ps-5">
-                        <CommentContainer onAddComments={onAddComments}/>
+                        <CommentContainer onAddComments={onAddComments} comments={renderComment.comment}/>
                     </Col>
                 </Row>
                 
