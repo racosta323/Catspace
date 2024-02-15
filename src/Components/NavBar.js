@@ -17,7 +17,7 @@ function NavBar({ setSearchTerm }) {
             <Navbar bg="primary" data-bs-theme="light" className='justify-content-between p-2' sticky="top">
                 <a href="/">
                     <Image 
-                        src="https://shorturl.at/pxDY6"
+                        src="./Logo.jpg"
                         alt="Logo"
                         roundedCircle
                         width={100}
