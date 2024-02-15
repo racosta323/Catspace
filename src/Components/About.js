@@ -29,7 +29,7 @@ function About() {
                     <Image 
                         src="https://static.scientificamerican.com/sciam/cache/file/9CAE9C60-8BC5-4CA3-95C180EFACDD99FD_source.jpg" 
                         alt="Hero Cat!" 
-                        width={360}
+                        // width={360}
                         height={360}
                         rounded
                     />
