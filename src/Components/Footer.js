@@ -10,7 +10,7 @@ function Footer(){
                             <a href="/">
                                 <Image 
                                 src="./Logo.jpg"
-                                alt="UPDATE THIS"
+                                alt="Logo"
                                 roundedCircle
                                 width={125}
                                 height={125}

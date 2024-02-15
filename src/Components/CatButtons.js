@@ -13,10 +13,11 @@ function CatButtons({ name, image, id }){
                     src={ image }
                     alt="something"
                     roundedCircle
-                    className="mx-5"
+                    className="mx-5 img-fluid figure-img "
                     width={200}
                     height={180}
                     onClick ={handleOnClick}
+                    style={{'flex-shrink': '0'}}
                 />
             </a>
             <Figure.Caption className="fs-3 mx-5 text-center mb-5">
