@@ -103,6 +103,7 @@ function AddACat(){
                     nickname: formData.nickname,
                     profilePhoto: formData.profilePhotoUrl,
                     bannerPhoto: formData.bannerPhotoUrl,
+                    //description: formData.description
                 })
             })
             .then(resp=>resp.json())
@@ -115,6 +116,7 @@ function AddACat(){
                     nickname: '',
                     profilePhotoUrl: '',
                     bannerPhotoUrl: '',
+                    //description: '',
                 });
             })
         }
@@ -171,13 +173,15 @@ function AddACat(){
                             </Form.Control.Feedback>
                         </Form.Group>
 
-                        <Form.Group className='mb-3' controlId='formBasicNickname'>
+                        <Form.Group className='mb-3' controlId='formBasicDescription'>
                             <Form.Label>Description:</Form.Label>
-                            <Form.Control required type="text" placeholder="Enter Nickname" name="nickname"value={formData.nickname} onChange={handleInputChange}></Form.Control>
+                            <Form.Control required as="textarea" placeholder="Enter description of cat" name="description" value={formData.description} onChange={handleInputChange}></Form.Control>
                             <Form.Control.Feedback type="invalid">
-                                    Please enter a nickname.
+                                    Please enter a description of your cat
                             </Form.Control.Feedback>
                         </Form.Group>
+
+                        
 
                         <Form.Group className='mb-3' controlId='formBasicProfilePhoto'>
                             <Form.Label>Upload Profile Photo:</Form.Label>
