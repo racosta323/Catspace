@@ -14,6 +14,8 @@ function AddACat(){
         nickname: "",
         profilePhotoUrl: "", 
         bannerPhotoUrl: "", 
+        description: "",
+        pronounced: ""
     })
 
     //validation
@@ -103,6 +105,8 @@ function AddACat(){
                     nickname: formData.nickname,
                     profilePhoto: formData.profilePhotoUrl,
                     bannerPhoto: formData.bannerPhotoUrl,
+                    //description: formData.description
+                    //pronounced: formData.pronounced
                 })
             })
             .then(resp=>resp.json())
@@ -115,6 +119,8 @@ function AddACat(){
                     nickname: '',
                     profilePhotoUrl: '',
                     bannerPhotoUrl: '',
+                    description: '',
+                    pronounced: ''
                 });
             })
         }
@@ -137,6 +143,16 @@ function AddACat(){
                             <Form.Label>Name:</Form.Label>
                             <InputGroup hasValidation>
                                 <Form.Control type="text" placeholder="Enter name" name="name" value={formData.name} onChange={handleInputChange} required></Form.Control>
+                                <Form.Control.Feedback type="invalid">
+                                    Please enter a name.
+                                </Form.Control.Feedback>
+                            </InputGroup>
+                        </Form.Group>
+
+                        <Form.Group className='mb-3' controlId='formBasicName'>
+                            <Form.Label>Pronounciation:</Form.Label>
+                            <InputGroup hasValidation>
+                                <Form.Control type="text" placeholder="Enter name pronounciation" name="pronounce" onChange={handleInputChange} required></Form.Control>
                                 <Form.Control.Feedback type="invalid">
                                     Please enter a name.
                                 </Form.Control.Feedback>
