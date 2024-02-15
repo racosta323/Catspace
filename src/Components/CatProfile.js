@@ -1,9 +1,33 @@
 import { Container, Image, Row, Col, Button, Card } from "react-bootstrap"
-import { useNavigate, useParams } from "react-router-dom"
+import {  useParams } from "react-router-dom"
 import { useState, useEffect } from "react"
 import { useOutletContext } from "react-router-dom"
+import CommentContainer from "./CommentContainer"
+import comments from "../comments"
 
 function CatProfile(){
+
+
+//----------------------------
+    const [allComments, setAllComments] = useState(comments)
+    
+    const commentNames = comments.map(comment=>comment.name)
+    
+
+    function onAddComments(newComment){
+        setAllComments(newComment)
+        console.log(renderName)
+
+
+
+
+        
+        console.log(renderComment.comment)
+        return <CommentContainer comment={renderComment}/>
+    }
+   
+
+//----------------------------
 
     const {deleteCat} = useOutletContext();
 
@@ -27,7 +51,18 @@ function CatProfile(){
     const renderNickname = (cat===null) ? null : cat.nickname;
     const renderPronounces = (cat===null) ? null : cat.pronounced;
 
-    const navigate = useNavigate();   
+//---------------------------
+    const renderComment = comments.find((comment)=>{
+
+
+        if(renderName===comment.name){
+            return true
+        }
+       
+        
+        console.log(comment.comment)
+     })
+//---------------------------
 
     return(
         <Container fluid className="p-5 mt-4">
@@ -91,17 +126,13 @@ function CatProfile(){
                 </Row>
 
             {/* <--Comments section--> */}
-                <Row className="mx-5 mt-0">
-                    <Col className="my-4 ps-5">
-                        <Card>
-                            <Card.Body className="shadow-lg bg-white rounded">
-                                <Card.Text className="fs-2 fw-semibold">COMMENTS</Card.Text>
-                                <Card.Text className="fs-5">Comment 1</Card.Text>
-                            </Card.Body>
-                        </Card>
+                <Row className="mx-5 mb-0">
+                    <Col className="my-3 ps-5">
+                        <CommentContainer onAddComments={onAddComments}/>
                     </Col>
                 </Row>
                 
+            {/* <--Delete Button--> */}
                 <Row className="mx-5">
                     <Col>
                         <Button variant="danger" className= "ms-5" value ={catId} onClick={deleteCat}>Delete Profile</Button>
