@@ -7,28 +7,6 @@ import comments from "../comments"
 
 function CatProfile(){
 
-
-//----------------------------
-    const [allComments, setAllComments] = useState(comments)
-    
-    const commentNames = comments.map(comment=>comment.name)
-    
-
-    function onAddComments(newComment){
-        setAllComments(newComment)
-        console.log(renderName)
-
-
-
-
-        
-        console.log(renderComment.comment)
-        return <CommentContainer comment={renderComment}/>
-    }
-   
-
-//----------------------------
-
     const {deleteCat} = useOutletContext();
 
     const [cat, setCat] = useState(null);
@@ -52,14 +30,31 @@ function CatProfile(){
     const renderPronounces = (cat===null) ? null : cat.pronounced;
 
 //---------------------------
-    const renderComment = comments.find((comment)=>{
-        if(renderName===comment.name){
-            return true
+    const renderComment = comments.map((comment)=>{
+        const lcName = (renderName===null) ? null : renderName.toLowerCase();
+        const commentLcName = comment.name.toLowerCase();
+        
+        if(lcName===commentLcName){
+            return comment.comment
         }
-       return comment
      })
 
      
+
+     const commentNames = comments.map(comment=>comment.name)
+
+     const [allComments, setAllComments] = useState(comments)
+    
+     function onAddComments(newComment){
+         setAllComments(newComment)
+         console.log(renderName)
+ 
+         console.log(renderComment.comment)
+         return <CommentContainer comment={renderComment}/>
+     }
+    
+
+
 //---------------------------
 
     return(
@@ -126,7 +121,7 @@ function CatProfile(){
             {/* <--Comments section--> */}
                 <Row className="mx-5 mb-0">
                     <Col className="my-3 ps-5">
-                        <CommentContainer onAddComments={onAddComments} comments={renderComment.comment}/>
+                        <CommentContainer onAddComments={onAddComments} comments={renderComment}/>
                     </Col>
                 </Row>
                 

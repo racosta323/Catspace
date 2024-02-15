@@ -6,19 +6,14 @@ import comments from "../comments"
 
 function CommentContainer({ onAddComments, comments }){
     
-
-    
-
     return(
         <Card>
             <Card.Body className="shadow-lg bg-white rounded">
                 <Card.Text className="fs-2 fw-semibold">COMMENTS</Card.Text>
                 <Card.Text className="fs-5">{ comments }</Card.Text>
-                <CommentForm onAddComments={onAddComments}/>
+                <CommentForm onAddComments={ onAddComments }/>
             </Card.Body>
         </Card>
-
-
     )
 }
 
