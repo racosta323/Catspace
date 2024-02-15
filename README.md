@@ -1,6 +1,6 @@
 # Welcome to Catspace! 
 
-This project was made by Hunter Matyi, Eve Strittmatter, and Rene Acosta in the [Flatiron School](https://flatironschool.com/courses/coding-bootcamp/)'s 2024 Software Engineering Bootcamp as an exercise in a creating single-page application. This is achieved with React routing, namely the createBrowserRouter and RouterProvider functions. Beyond this minimal requirement, we've made frequent use of bootstrap styling, a separately hosted database, and a publicly available API. The frontend is hosted on [Netlify](https://www.netlify.com/) and the backend on [Render](https://render.com/). 
+This project was made by Hunter Matyi, Eve Strittmatter, and Rene Acosta in the [Flatiron School](https://flatironschool.com/courses/coding-bootcamp/)'s 2024 Software Engineering Bootcamp as an exercise in a creating single-page application. This is achieved with React routing, namely the createBrowserRouter and RouterProvider functions. Beyond this minimal requirement, we've made frequent use of React Bootstrap styling, a separately hosted database, and a publicly available API. The frontend is hosted on [Netlify](https://www.netlify.com/) and the backend on [Render](https://render.com/). 
 
 ## Functionality
 
@@ -14,9 +14,13 @@ The add a cat page can be navigated to from the navigation pane in the header, t
 
 ### Profile Page
 
-Here you can see the details of a cat that are not visible on the homepage. The profile picture is displayed over the banner image, and below there is pronunciation (not in the add a cat form at the moment), current location, an about section with current location, original location, and nickname, and a yet-to-be-implemented comments section. There is also a hidden photos section above the about section that may be implemented in the future. At the bottom of each profile is a button to delete the cat from the database. Hitting it will also redirect the user to the homepage. In a future product, this button and account edit features will be available soley to the owner of the account. 
+Here you can see the details of a cat that are not visible on the homepage. The profile picture is displayed over the banner image, and below there is pronunciation , current location, an about section with current location, original location, nickname, and a description section. There is also a hidden photos section above the about section that may be implemented in the future. At the bottom of each profile is a button to delete the cat from the database. Hitting it will also redirect the user to the homepage. In a future product, this button and account edit features will be available soley to the owner of the account. 
 
 
 ### About Page
 
 Here we have some info about the site and its developers, as well as some useful links. We hope you enjoy Catspace! 
+
+### Error Page
+
+Got lost? Users will be re-routed to our custom error page if they attempt to navigate to a page that doesn't exist. 
