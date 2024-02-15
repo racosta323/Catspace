@@ -55,7 +55,7 @@ function About() {
                 <Col className="m-5 pe-1">
                     <Stack className="col-md-6 mx-auto">
                         <Image
-                            src="https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/169588_v9_bb.jpg"
+                            src="/Rene+Ash.jpg"
                             alt="photo of Rene"
                             width={171}
                             height={180}
